@@ -72,16 +72,20 @@ section{padding:clamp(72px,11vw,150px) 0}
 .title{font-size:clamp(40px,6vw,88px);margin-bottom:clamp(32px,5vw,64px)}
 /* work */
 .work{display:flex;gap:12px;height:min(70vh,580px)}
-.tile{position:relative;flex:1;overflow:hidden;display:flex;align-items:flex-end;padding:22px;cursor:pointer;transition:flex .7s cubic-bezier(.2,.7,.2,1)}
-.tile .img{position:absolute;inset:0;filter:grayscale(.8) saturate(.5) blur(3px);opacity:.75;transform:scale(1.1);transition:filter .7s,opacity .7s,transform .7s}
-.tile .veil{position:absolute;inset:0;background:rgba(245,244,239,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:opacity .6s,backdrop-filter .6s}
+.tile{position:relative;flex:1;overflow:hidden;isolation:isolate;display:flex;align-items:flex-end;padding:22px;cursor:pointer;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
+/* стан спокою: ніби за склом, легка матовість без сірої мли */
+.tile .img{position:absolute;inset:0;filter:saturate(.85) brightness(1.03);transform:scale(1.04);transition:filter .8s,transform .8s}
+.tile .veil{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.32),rgba(255,255,255,.10) 48%,rgba(245,244,239,.24));backdrop-filter:blur(2.5px);-webkit-backdrop-filter:blur(2.5px);box-shadow:inset 0 0 46px rgba(255,255,255,.30),inset 0 0 0 1px rgba(255,255,255,.35);transition:opacity .7s,backdrop-filter .7s,-webkit-backdrop-filter .7s,box-shadow .7s}
 .tile h3{position:relative;font-size:clamp(17px,1.6vw,24px);font-weight:300;letter-spacing:.08em;writing-mode:vertical-rl;transform:rotate(180deg);transition:font-size .5s,font-weight .5s}
-.work:not(.has-open):hover .tile{flex:.7}
-.work:not(.has-open) .tile:hover,.work:not(.has-open) .tile:focus-visible{flex:2.6}
-.work.has-open .tile{flex:.45}
-.work.has-open .tile.open{flex:6}
-.work:not(.has-open) .tile:hover .img,.work:not(.has-open) .tile:focus-visible .img,.tile.open .img{filter:none;opacity:1;transform:scale(1)}
-.work:not(.has-open) .tile:hover .veil,.work:not(.has-open) .tile:focus-visible .veil,.tile.open .veil{opacity:0;backdrop-filter:none;-webkit-backdrop-filter:none}
+/* ширина: наведення відкриває ширше, решта щільно стискається; клік відкриває ще трохи більше */
+@media(min-width:901px){
+.work:not(.has-open):hover .tile{flex:.5}
+.work:not(.has-open) .tile:hover,.work:not(.has-open) .tile:focus-visible{flex:10}
+.work.has-open .tile{flex:.4}
+.work.has-open .tile.open{flex:38}
+}
+.work:not(.has-open) .tile:hover .img,.work:not(.has-open) .tile:focus-visible .img,.tile.open .img{filter:none;transform:scale(1)}
+.work:not(.has-open) .tile:hover .veil,.work:not(.has-open) .tile:focus-visible .veil,.tile.open .veil{opacity:0;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
 .work:not(.has-open) .tile:hover h3,.work:not(.has-open) .tile:focus-visible h3,.tile.open h3{writing-mode:horizontal-tb;transform:none;font-size:clamp(26px,3vw,44px);font-weight:400;color:#fff;text-shadow:0 1px 18px rgba(0,0,0,.35)}
 .work:not(.has-open) .tile:hover:after,.tile.open:after{content:"";position:absolute;top:22px;right:22px;width:26px;aspect-ratio:320/187;background:var(--lime);-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;animation:pop .5s var(--ease) both}
 @keyframes pop{from{opacity:0;transform:scale(.4) rotate(-20deg)}}
@@ -379,6 +383,7 @@ addEventListener('DOMContentLoaded',function(){try{if(localStorage.getItem('om-l
 (function(){var w=document.querySelector('.work'),t=[].slice.call(w.querySelectorAll('.tile'));
  function set(o){t.forEach(function(x){var on=x===o;x.classList.toggle('open',on);x.setAttribute('aria-expanded',on)});w.classList.toggle('has-open',!!o)}
  t.forEach(function(x){x.addEventListener('click',function(){var was=x.classList.contains('open');set(was?null:x);if(!was&&innerWidth<=900)setTimeout(function(){x.scrollIntoView({behavior:'smooth',block:'nearest'})},350)});
+  x.addEventListener('mouseleave',function(){if(x.classList.contains('open')&&matchMedia('(hover:hover)').matches)set(null)});
   x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();x.click()}})});
  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(null)});
  document.addEventListener('click',function(e){if(!e.target.closest('.work'))set(null)});
