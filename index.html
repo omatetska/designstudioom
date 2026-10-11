@@ -22,7 +22,7 @@
 <link rel="preload" href="fonts/file-2.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="google-site-verification" content="6IoMY8Kp87LEO9DWv9DmkbsmEhGU4IPBmXGGVtuRXSU" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://designstudioom.no/#studio","name":"Designstudio OM","url":"https://designstudioom.no/","image":"https://designstudioom.no/images/hero-01.webp","logo":"https://designstudioom.no/images/logo%20farge.svg","description":"Grafisk designstudio i Porsgrunn: logo, visuell identitet, redesign, trykk, skilt og bilprofilering for bedrifter i hele Norge.","telephone":"+4796884878","email":"studio.g.d.om@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Porsgrunn","addressRegion":"Telemark","addressCountry":"NO"},"areaServed":[{"@type":"City","name":"Porsgrunn"},{"@type":"Country","name":"Norge"}],"founder":{"@type":"Person","name":"Olga"},"knowsAbout":["Grafisk design","Branding","Visuell identitet","Redesign","Skilt","Bilprofilering","Motion design"],"sameAs":["https://www.facebook.com/profile.php?id=61595099075917"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Tjenester","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo design"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Visuell identitet"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Brand guidelines"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Redesign"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Trykkeklare filer og trykksaker"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Skilt og profilering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bilprofilering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Motion design"}}]}}
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://designstudioom.no/#studio","name":"Designstudio OM","url":"https://designstudioom.no/","image":"https://designstudioom.no/images/hero-01.webp","logo":"https://designstudioom.no/images/logo%20svart.svg","description":"Grafisk designstudio i Porsgrunn: logo, visuell identitet, redesign, trykk, skilt og bilprofilering for bedrifter i hele Norge.","telephone":"+4796884878","email":"studio.g.d.om@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Porsgrunn","addressRegion":"Telemark","addressCountry":"NO"},"areaServed":[{"@type":"City","name":"Porsgrunn"},{"@type":"Country","name":"Norge"}],"founder":{"@type":"Person","name":"Olga"},"knowsAbout":["Grafisk design","Branding","Visuell identitet","Redesign","Skilt","Bilprofilering","Motion design"],"sameAs":["https://www.facebook.com/profile.php?id=61595099075917"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Tjenester","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo design"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Visuell identitet"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Brand guidelines"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Redesign"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Trykkeklare filer og trykksaker"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Skilt og profilering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bilprofilering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Motion design"}}]}}
 </script>
 <style>
 @font-face{font-family:"Albert Sans";src:url("fonts/file-1.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap}
@@ -44,9 +44,9 @@ header{position:sticky;top:0;z-index:20;border-bottom:1px solid transparent;tran
 header.sc{border-bottom-color:var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
 .brand{display:flex;align-items:center}
-.brand img{display:block;height:38px;width:auto;transition:transform .6s var(--ease)}
+.brand img{display:block;height:26px;width:auto;max-width:160px;transition:transform .6s var(--ease)}
 .brand:hover img{transform:scale(1.04)}
-.flogo{display:block;height:60px;width:auto;margin-bottom:14px}
+.flogo{display:block;height:34px;width:auto;max-width:200px}
 .brand b{display:block;font-weight:400;letter-spacing:.02em;font-size:18px;line-height:1.1;white-space:nowrap}
 .brand small{display:block;color:var(--mute);font-size:12px;font-weight:300}
 nav{display:flex;gap:clamp(16px,3vw,40px);font-weight:200;font-size:17px}
@@ -195,7 +195,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;font-size:15px}
 .base{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:40px;color:var(--mute);font-size:13px}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.rv.in{opacity:1;transform:none}
 /* responsive */
-@media(max-width:480px){.brand img{height:30px}.flogo{height:48px}}
+@media(max-width:480px){.brand img{height:22px}.flogo{height:30px}}
 @media(max-width:900px){
  .hero{height:clamp(600px,88svh,720px)}
  .slide{grid-template-columns:1fr;grid-template-rows:36% 1fr}
@@ -230,7 +230,7 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
 </head>
 <body>
 <header><div class="wrap bar">
- <a class="brand" href="#top" aria-label="Designstudio OM, til toppen"><img src="images/logo%20farge.svg" alt="Designstudio OM" decoding="async"></a>
+ <a class="brand" href="#top" aria-label="Designstudio OM, til toppen"><img src="images/logo%20svart.svg" alt="Designstudio OM" decoding="async"></a>
  <nav aria-label="Hovedmeny"><a href="#arbeid">Arbeid</a><a href="#tjenester">Tjenester</a><a href="#om">Om meg</a><a href="#kontakt">Kontakt</a><div class="lang" role="group" aria-label="Språk"><button type="button" data-l="no" aria-pressed="true">NO</button><button type="button" data-l="en" aria-pressed="false">EN</button></div></nav>
  <a class="btn sm" href="#kontakt">Kontakt meg</a>
  <button class="bgr" type="button" aria-label="Meny" aria-expanded="false"></button>
@@ -297,7 +297,7 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
 
 <footer><div class="wrap">
  <div class="fg">
-  <div><img class="flogo" src="images/logo%20farge.svg" alt="" loading="lazy" decoding="async"><b>Designstudio OM</b><small>Grafisk designstudio</small></div>
+  <div><img class="flogo" src="images/logo%20svart.svg" alt="Designstudio OM" loading="lazy" decoding="async"></div>
   <div><a href="#arbeid">Arbeid</a><a href="#tjenester">Tjenester</a><a href="#om">Om meg</a><a href="#kontakt">Kontakt</a></div>
   <div><a href="tel:+4796884878">+47 968 84 878</a><a href="mailto:studio.g.d.om@gmail.com">studio.g.d.om@gmail.com</a><a href="https://www.facebook.com/profile.php?id=61595099075917" target="_blank" rel="noopener">Facebook</a></div>
  </div>
