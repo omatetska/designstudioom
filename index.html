@@ -78,8 +78,8 @@ img.portrait{display:block;width:100%;object-fit:cover;object-position:50% 15%;b
 section{padding:clamp(72px,11vw,150px) 0}
 .title{font-size:clamp(40px,6vw,88px);margin-bottom:clamp(32px,5vw,64px)}
 /* work: 3 стовпчики по 2 плитки; hover = 80 %, клік = 90 % ширини */
-.work{display:flex;gap:12px;height:min(72vh,620px)}
-.col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:12px;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
+.work{display:flex;gap:24px;height:min(72vh,620px)}
+.col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:24px;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
 .tile{position:relative;flex:1 1 0;min-height:0;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;gap:8px;-webkit-tap-highlight-color:transparent;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
 .tile .img{flex:1 1 0;min-height:0;width:100%;object-fit:cover;display:block;background:#e9e8e1}
 
@@ -156,7 +156,7 @@ form textarea{flex:1}
 .about h2{font-size:clamp(36px,4.6vw,64px);margin-bottom:20px}
 .about strong{font-weight:600}
 .about p{max-width:30em;margin-bottom:14px}
-.social{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:26px}
+.social{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:26px}
 .pf{position:relative;max-width:300px;margin-bottom:28px}
 .pf .portrait{margin:0;max-width:none;width:100%;aspect-ratio:4/5}
 .pf:after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(transparent,rgba(30,30,30,.7));pointer-events:none}
