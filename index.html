@@ -77,28 +77,22 @@ img.portrait{display:block;width:100%;object-fit:cover;object-position:50% 15%;b
 /* sections */
 section{padding:clamp(72px,11vw,150px) 0}
 .title{font-size:clamp(40px,6vw,88px);margin-bottom:clamp(32px,5vw,64px)}
-/* work */
-.work{display:flex;gap:12px;height:min(70vh,580px)}
-.tile{position:relative;flex:1;overflow:hidden;isolation:isolate;display:flex;align-items:flex-end;padding:22px;cursor:pointer;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
-/* стан спокою: ніби за склом, легка матовість без сірої мли */
-.tile .img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) brightness(1.03);transform:scale(1.04);transition:filter .8s,transform .8s}
-.tile .veil{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.32),rgba(255,255,255,.10) 48%,rgba(245,244,239,.24));backdrop-filter:blur(2.5px);-webkit-backdrop-filter:blur(2.5px);box-shadow:inset 0 0 46px rgba(255,255,255,.30),inset 0 0 0 1px rgba(255,255,255,.35);transition:opacity .7s,backdrop-filter .7s,-webkit-backdrop-filter .7s,box-shadow .7s}
-.tile h3{position:relative;font-size:clamp(17px,1.6vw,24px);font-weight:300;letter-spacing:.08em;writing-mode:vertical-rl;transform:rotate(180deg);transition:font-size .5s,font-weight .5s}
-/* ширина: наведення відкриває ширше, решта щільно стискається; клік відкриває ще трохи більше */
+/* work: 3 стовпчики по 2 плитки; hover = 80 %, клік = 90 % ширини */
+.work{display:flex;gap:12px;height:min(72vh,620px)}
+.col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:12px;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
+.tile{position:relative;flex:1 1 0;min-height:0;overflow:hidden;cursor:pointer;background:#e9e8e1;-webkit-tap-highlight-color:transparent}
+.tile .img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tile:after{content:"";position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(transparent,rgba(30,30,30,.62));pointer-events:none}
+.tile h3{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;margin:0;color:#fff;font-size:clamp(14px,1.2vw,18px);font-weight:300;letter-spacing:.02em;line-height:1.25;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;transition:opacity .4s}
 @media(min-width:901px){
-.work:not(.has-open):hover .tile{flex:.5}
-.work:not(.has-open) .tile:hover,.work:not(.has-open) .tile:focus-visible{flex:10}
-.work.has-open .tile{flex:.4}
-.work.has-open .tile.open{flex:38}
+.work:not(.has-open):hover .col{flex:1}
+.work:not(.has-open) .col:hover,.work:not(.has-open) .col:focus-within{flex:8}
+.work.has-open .col{flex:1}
+.work.has-open .col.open{flex:18}
+.work:hover:not(.has-open) .col:not(:hover):not(:focus-within) h3,.work.has-open .col:not(.open) h3{opacity:0}
 }
-.work:not(.has-open) .tile:hover .img,.work:not(.has-open) .tile:focus-visible .img,.tile.open .img{filter:none;transform:scale(1)}
-.work:not(.has-open) .tile:hover .veil,.work:not(.has-open) .tile:focus-visible .veil,.tile.open .veil{opacity:0;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
-.work:not(.has-open) .tile:hover h3,.work:not(.has-open) .tile:focus-visible h3,.tile.open h3{writing-mode:horizontal-tb;transform:none;font-size:clamp(26px,3vw,44px);font-weight:400;color:#fff;text-shadow:0 1px 18px rgba(0,0,0,.35)}
-.work:not(.has-open) .tile:hover:after,.tile.open:after{content:"";position:absolute;top:22px;right:22px;width:26px;aspect-ratio:320/187;background:var(--lime);-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;animation:pop .5s var(--ease) both}
-@keyframes pop{from{opacity:0;transform:scale(.4) rotate(-20deg)}}
-.tile.open{cursor:zoom-out}.tile.open:before{content:"Lukk";position:absolute;top:24px;left:22px;z-index:2;color:#fff;font-size:14px;letter-spacing:.06em;text-shadow:0 1px 12px rgba(0,0,0,.4)}
-.tile{-webkit-tap-highlight-color:transparent}
-/* plassholdere: bytt til ekte prosjektbilder. Flerfarget logo-gradient er forbeholdt Motion */
+.tile.open{cursor:zoom-out}
+.tile.open:before{content:"Lukk";position:absolute;top:16px;left:16px;z-index:2;color:#fff;font-size:14px;letter-spacing:.06em;text-shadow:0 1px 12px rgba(0,0,0,.4)}
 /* services */
 .lead{max-width:34em;margin:-24px 0 clamp(32px,5vw,64px);color:var(--mute)}
 .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
@@ -194,12 +188,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;font-size:15px}
  .hero .h1{font-size:clamp(30px,8vw,44px)}
  nav{display:none}
  .work{flex-direction:column;height:auto}
- .tile,.work:hover .tile,.work .tile:hover{flex:none;height:150px;transition:height .5s}
- .work .tile:hover,.work .tile:focus-visible{height:260px}
- .tile h3,.tile:hover h3{writing-mode:horizontal-tb;transform:none;font-size:24px}
- .work.has-open .tile,.work.has-open .tile.open{flex:none}
- .work.has-open .tile:not(.open){height:96px}
- .work.has-open .tile.open{height:400px}
+ .col{flex:none!important;flex-direction:column}
+ .tile{flex:none;height:190px;transition:height .5s}
+ .tile.open{height:400px}
  .svc,.ac{grid-template-columns:1fr}
  .card{min-height:0}
  .portrait{max-width:none;aspect-ratio:4/3}
@@ -239,12 +230,18 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
 <section id="arbeid"><div class="wrap">
  <h2 class="title">Arbeid</h2>
  <div class="work">
-  <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Nettside og sosiale medier – SUMIO"><img class="img" src="images/arbeid-02.webp" alt="Nettside og Instagram-profil for hudpleiemerket SUMIO" loading="lazy" decoding="async"><div class="veil"></div></div>
-  <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Visuell identitet – SUMIO"><img class="img" src="images/arbeid-01.webp" alt="Visuell identitet for hudpleiemerket SUMIO: produktemballasje, handleposer, visittkort, butikkfasade og plakat" loading="lazy" decoding="async"><div class="veil"></div></div>
-  <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Visuell identitet – LUMA"><img class="img" src="images/arbeid-03.webp" alt="Visuell identitet for klesmerket LUMA: handlenett, ryggsekk, gaveeske og plakat på t-banestasjon" loading="lazy" decoding="async"><div class="veil"></div></div>
-  <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Nettside og sosiale medier – LUMA"><img class="img" src="images/arbeid-04.webp" alt="Nettside og Instagram-profil for klesmerket LUMA" loading="lazy" decoding="async"><div class="veil"></div></div>
-  <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Magasindesign – Your Life"><img class="img" src="images/arbeid-05.webp" alt="Magasindesign: forside og innsideoppslag for «Your Life Magazine»" loading="lazy" decoding="async"><div class="veil"></div></div>
-  <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Profilering – NM natt-orientering 2027"><img class="img" src="images/arbeid-06.webp" alt="Profilering for NM i natt-orientering 2027 i Brevik: beachflagg, telt, buff og lue" loading="lazy" decoding="async"><div class="veil"></div></div>
+  <div class="col">
+   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Nettside og sosiale medier – SUMIO"><img class="img" src="images/arbeid-02.webp" alt="Nettside og Instagram-profil for hudpleiemerket SUMIO" loading="lazy" decoding="async"><h3>Nettside og sosiale medier – SUMIO</h3></div>
+   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Visuell identitet – SUMIO"><img class="img" src="images/arbeid-01.webp" alt="Visuell identitet for hudpleiemerket SUMIO: produktemballasje, handleposer, visittkort, butikkfasade og plakat" loading="lazy" decoding="async"><h3>Visuell identitet – SUMIO</h3></div>
+  </div>
+  <div class="col">
+   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Visuell identitet – LUMA"><img class="img" src="images/arbeid-03.webp" alt="Visuell identitet for klesmerket LUMA: handlenett, ryggsekk, gaveeske og plakat på t-banestasjon" loading="lazy" decoding="async"><h3>Visuell identitet – LUMA</h3></div>
+   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Nettside og sosiale medier – LUMA"><img class="img" src="images/arbeid-04.webp" alt="Nettside og Instagram-profil for klesmerket LUMA" loading="lazy" decoding="async"><h3>Nettside og sosiale medier – LUMA</h3></div>
+  </div>
+  <div class="col">
+   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Magasindesign – Your Life"><img class="img" src="images/arbeid-05.webp" alt="Magasindesign: forside og innsideoppslag for «Your Life Magazine»" loading="lazy" decoding="async"><h3>Magasindesign – Your Life</h3></div>
+   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Profilering – NM natt-orientering 2027"><img class="img" src="images/arbeid-06.webp" alt="Profilering for NM i natt-orientering 2027 i Brevik: beachflagg, telt, buff og lue" loading="lazy" decoding="async"><h3>Profilering – NM natt-orientering 2027</h3></div>
+  </div>
  </div>
 </div></section>
 
@@ -291,7 +288,7 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
 </div></footer>
 
 <script>
-var EN=false,TE={"Design · Branding · Visuell identitet":"Design · Branding · Visual identity","Arbeid":"Work","Tjenester":"Services","Om meg":"About me","Kontakt":"Contact","Kontakt meg":"Get in touch","Bedriften din har vokst.":"Your business has grown.","På tide å":"Time to","fornye uttrykket.":"renew its identity.","En sterk start.":"A strong start.","Et uttrykk som":"An identity that","fungerer.":"works.","Fra en liten teknisk jobb til en komplett visuell identitet. Alle priser er startpriser. Endelig pris avhenger av omfang.":"From a small technical job to a complete visual identity. All prices are starting prices. The final price depends on scope.","Ny virksomhet":"New business","Eksisterende virksomhet":"Existing business","Små oppgaver":"Small tasks","I bevegelse":"In motion","Design & Production":"Design & Production","Et helt uttrykk fra bunnen.":"A complete identity from scratch.","Du trenger ikke alltid noe helt nytt. Oppdater det du allerede har.":"You don’t always need something completely new. Update what you already have.","Du trenger ikke alltid et nytt design. Kanskje du bare trenger å få det du har til å fungere.":"You don’t always need a new design. Maybe you just need what you have to work.","Identiteten din, i bevegelse.":"Your identity, in motion.","Dette får du":"What you get","Pris fra":"From","Lukk":"Close","Hei, jeg er Olga.":"Hi, I’m Olga.","Grafisk designer med":"Graphic designer with","års erfaring og kunder fra":"years of experience and clients from","land.":"countries.","Jeg skaper visuelle løsninger som hjelper bedrifter med å bli synlige, gjenkjennelige og nå målene sine.":"I create visual solutions that help businesses become visible, recognisable and reach their goals.","La oss skape noe sammen.":"Let’s create something together.","Navn*":"Name*","E-post*":"Email*","Telefon (valgfritt)":"Phone (optional)","Valgt tjeneste (valgfritt)":"Selected service (optional)","Melding*":"Message*","Vedlegg (valgfritt)":"Attachment (optional)","Velg fil":"Choose file","Ingen fil valgt":"No file chosen","Send forespørsel":"Send request","Sender …":"Sending …","Takk! Meldingen din er sendt.":"Thank you! Your message has been sent.","Noe gikk galt. Prøv igjen.":"Something went wrong. Please try again.","Fyll ut dette feltet.":"Please fill out this field.","Skriv inn en gyldig e-postadresse.":"Please enter a valid email address.","Grafisk designstudio":"Graphic design studio","Personvern":"Privacy","Informasjonskapsler":"Cookies"};
+var EN=false,TE={"Design · Branding · Visuell identitet":"Design · Branding · Visual identity","Arbeid":"Work","Tjenester":"Services","Om meg":"About me","Kontakt":"Contact","Kontakt meg":"Get in touch","Bedriften din har vokst.":"Your business has grown.","På tide å":"Time to","fornye uttrykket.":"renew its identity.","En sterk start.":"A strong start.","Et uttrykk som":"An identity that","fungerer.":"works.","Fra en liten teknisk jobb til en komplett visuell identitet. Alle priser er startpriser. Endelig pris avhenger av omfang.":"From a small technical job to a complete visual identity. All prices are starting prices. The final price depends on scope.","Ny virksomhet":"New business","Eksisterende virksomhet":"Existing business","Små oppgaver":"Small tasks","I bevegelse":"In motion","Design & Production":"Design & Production","Et helt uttrykk fra bunnen.":"A complete identity from scratch.","Du trenger ikke alltid noe helt nytt. Oppdater det du allerede har.":"You don’t always need something completely new. Update what you already have.","Du trenger ikke alltid et nytt design. Kanskje du bare trenger å få det du har til å fungere.":"You don’t always need a new design. Maybe you just need what you have to work.","Identiteten din, i bevegelse.":"Your identity, in motion.","Dette får du":"What you get","Pris fra":"From","Lukk":"Close","Nettside og sosiale medier – SUMIO":"Website and social media – SUMIO","Visuell identitet – SUMIO":"Visual identity – SUMIO","Visuell identitet – LUMA":"Visual identity – LUMA","Nettside og sosiale medier – LUMA":"Website and social media – LUMA","Magasindesign – Your Life":"Magazine design – Your Life","Profilering – NM natt-orientering 2027":"Branding – NM night orienteering 2027","Hei, jeg er Olga.":"Hi, I’m Olga.","Grafisk designer med":"Graphic designer with","års erfaring og kunder fra":"years of experience and clients from","land.":"countries.","Jeg skaper visuelle løsninger som hjelper bedrifter med å bli synlige, gjenkjennelige og nå målene sine.":"I create visual solutions that help businesses become visible, recognisable and reach their goals.","La oss skape noe sammen.":"Let’s create something together.","Navn*":"Name*","E-post*":"Email*","Telefon (valgfritt)":"Phone (optional)","Valgt tjeneste (valgfritt)":"Selected service (optional)","Melding*":"Message*","Vedlegg (valgfritt)":"Attachment (optional)","Velg fil":"Choose file","Ingen fil valgt":"No file chosen","Send forespørsel":"Send request","Sender …":"Sending …","Takk! Meldingen din er sendt.":"Thank you! Your message has been sent.","Noe gikk galt. Prøv igjen.":"Something went wrong. Please try again.","Fyll ut dette feltet.":"Please fill out this field.","Skriv inn en gyldig e-postadresse.":"Please enter a valid email address.","Grafisk designstudio":"Graphic design studio","Personvern":"Privacy","Informasjonskapsler":"Cookies"};
 function L(k){return EN&&TE[k]||k}
 function apply(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n,a=[];
  while(n=w.nextNode()){var P=n.parentNode;if(!n.nodeValue.trim()||/^(SCRIPT|STYLE)$/.test(P.tagName)||P.closest('.kin'))continue;a.push(n)}
@@ -382,9 +379,9 @@ addEventListener('DOMContentLoaded',function(){try{if(localStorage.getItem('om-l
 })();
 
 (function(){var w=document.querySelector('.work'),t=[].slice.call(w.querySelectorAll('.tile'));
- function set(o){t.forEach(function(x){var on=x===o;x.classList.toggle('open',on);x.setAttribute('aria-expanded',on)});w.classList.toggle('has-open',!!o)}
+ function set(o){t.forEach(function(x){var on=x===o;x.classList.toggle('open',on);x.setAttribute('aria-expanded',on);x.parentNode.classList.toggle('open',on||(o&&x.parentNode===o.parentNode))});w.classList.toggle('has-open',!!o)}
  t.forEach(function(x){x.addEventListener('click',function(){var was=x.classList.contains('open');set(was?null:x);if(!was&&innerWidth<=900)setTimeout(function(){x.scrollIntoView({behavior:'smooth',block:'nearest'})},350)});
-  x.addEventListener('mouseleave',function(){if(x.classList.contains('open')&&matchMedia('(hover:hover)').matches)set(null)});
+  x.parentNode.addEventListener('mouseleave',function(){if(x.classList.contains('open')&&matchMedia('(hover:hover)').matches)set(null)});
   x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();x.click()}})});
  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(null)});
  document.addEventListener('click',function(e){if(!e.target.closest('.work'))set(null)});
