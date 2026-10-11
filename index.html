@@ -4,12 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f4ef">
-<title>Logo og visuell identitet | Designstudio OM</title>
-<meta name="description" content="Grafisk designstudio som hjelper nye og etablerte bedrifter med logo, visuell identitet, redesign, trykk, skilt og bilprofilering. Be om tilbud.">
-<meta property="og:title" content="Logo og visuell identitet | Designstudio OM">
-<meta property="og:description" content="Grafisk designstudio som hjelper nye og etablerte bedrifter med logo, visuell identitet, redesign, trykk, skilt og bilprofilering. Be om tilbud.">
+<title>Grafisk designer i Porsgrunn | Designstudio OM</title>
+<meta name="description" content="Grafisk designstudio i Porsgrunn for bedrifter i hele Norge: logo, visuell identitet, redesign, trykk, skilt og bilprofilering. Be om tilbud.">
+<meta property="og:title" content="Grafisk designer i Porsgrunn | Designstudio OM">
+<meta property="og:description" content="Grafisk designstudio i Porsgrunn for bedrifter i hele Norge: logo, visuell identitet, redesign, trykk, skilt og bilprofilering. Be om tilbud.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nb_NO">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Designstudio OM","description":"Grafisk designstudio i Porsgrunn: logo, visuell identitet, redesign, trykk, skilt og bilprofilering.","telephone":"+4796884878","email":"studio.g.d.om@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Porsgrunn","addressCountry":"NO"},"areaServed":{"@type":"Country","name":"Norge"},"founder":{"@type":"Person","name":"Olga"},"knowsAbout":["Grafisk design","Branding","Visuell identitet","Redesign","Skilt","Bilprofilering","Motion design"],"sameAs":["https://www.facebook.com/profile.php?id=61595099075917"]}
+</script>
 <style>
 @font-face{font-family:"Albert Sans";src:url("fonts/file-1.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap}
 @font-face{font-family:"Albert Sans";src:url("fonts/file-2.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
@@ -26,7 +29,7 @@ body{background:var(--bg);color:var(--ink);font:300 17px/1.55 var(--f);-webkit-f
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
-h1,h2,h3{font-weight:200;letter-spacing:-.02em;line-height:1.02}
+h1,h2,h3,.h1{font-weight:200;letter-spacing:-.02em;line-height:1.02}
 /* header */
 header{position:sticky;top:0;z-index:20;border-bottom:1px solid transparent;transition:border-color .4s;background:rgba(245,244,239,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 header.sc{border-bottom-color:var(--line)}
@@ -53,14 +56,15 @@ nav a:hover:after{width:100%}
 .pic{position:relative;overflow:hidden;background:#e9e8e1}
 .art{position:absolute;inset:0;transition:transform 7s var(--ease);transform:scale(1.06)}
 .slide.on .art{transform:scale(1)}
-.hero h1{font-size:clamp(34px,4.5vw,72px);line-height:1.04}
+.hero h1,.hero .h1{font-size:clamp(34px,4.5vw,72px);line-height:1.04;margin:0}
+.hero .kicker{font-size:clamp(12px,1.1vw,15px);font-weight:400;letter-spacing:.14em;text-transform:uppercase;line-height:1.4;color:var(--mute);margin:0 0 -8px}
 .hl{background:linear-gradient(var(--lime),var(--lime)) 0 90%/0% .36em no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 .06em;margin:0 -.06em}
 .slide.on .hl{animation:hl 1s var(--ease) .9s forwards}
 @keyframes hl{to{background-size:100% .36em}}
 .hero .btn{padding:16px 34px;font-size:16px}
 .hero .btn:after{content:"→";display:inline-block;margin-left:14px;transition:transform .3s var(--ease)}
 .hero .btn:hover:after{transform:translateX(5px)}
-.slide.on h1{animation:rise 1s var(--ease) .2s both}.slide.on .btn{animation:rise 1s var(--ease) .45s both}
+.slide.on .h1{animation:rise 1s var(--ease) .2s both}.slide.on .kicker{animation:rise 1s var(--ease) .1s both}.slide.on .btn{animation:rise 1s var(--ease) .45s both}
 @keyframes rise{from{opacity:0;transform:translateY(22px)}}
 .photo,.veil{position:absolute;inset:0;width:100%;height:100%}
 .photo{object-fit:cover}
@@ -187,7 +191,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;font-size:15px}
  .slide{grid-template-columns:1fr;grid-template-rows:36% 1fr}
  .pic{order:-1}
  .txt{justify-content:flex-start;padding:28px var(--pad) 72px;gap:22px}
- .hero h1{font-size:clamp(30px,8vw,44px)}
+ .hero .h1{font-size:clamp(30px,8vw,44px)}
  nav{display:none}
  .work{flex-direction:column;height:auto}
  .tile,.work:hover .tile,.work .tile:hover{flex:none;height:150px;transition:height .5s}
@@ -227,8 +231,8 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
 
 <main id="top">
 <div class="hero" aria-roledescription="carousel" aria-label="Introduksjon">
- <div class="slide s1 on"><div class="txt"><h1>Bedriften din har vokst.<br>På tide å <span class="hl">fornye uttrykket.</span></h1><a class="btn" href="#kontakt">Kontakt meg</a></div><div class="pic"><div class="art"><img class="photo" src="images/hero-01.webp" alt="" fetchpriority="high" decoding="async"></div></div></div>
- <div class="slide s2"><div class="txt"><h1>En sterk start.<br>Et uttrykk som <span class="hl">fungerer.</span></h1><a class="btn" href="#kontakt">Kontakt meg</a></div><div class="pic"><div class="art"><img class="photo" src="images/hero-02.webp" alt="" loading="lazy" decoding="async"></div></div></div>
+ <div class="slide s1 on"><div class="txt"><h1 class="kicker">Design · Branding · Visuell identitet</h1><p class="h1">Bedriften din har vokst.<br>På tide å <span class="hl">fornye uttrykket.</span></p><a class="btn" href="#kontakt">Kontakt meg</a></div><div class="pic"><div class="art"><img class="photo" src="images/hero-01.webp" alt="" fetchpriority="high" decoding="async"></div></div></div>
+ <div class="slide s2"><div class="txt"><p class="kicker">Design · Branding · Visuell identitet</p><p class="h1">En sterk start.<br>Et uttrykk som <span class="hl">fungerer.</span></p><a class="btn" href="#kontakt">Kontakt meg</a></div><div class="pic"><div class="art"><img class="photo" src="images/hero-02.webp" alt="" loading="lazy" decoding="async"></div></div></div>
  <div class="dots"><button class="on" aria-label="Slide 1"></button><button aria-label="Slide 2"></button></div>
 </div>
 
@@ -287,7 +291,7 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
 </div></footer>
 
 <script>
-var EN=false,TE={"Arbeid":"Work","Tjenester":"Services","Om meg":"About me","Kontakt":"Contact","Kontakt meg":"Get in touch","Bedriften din har vokst.":"Your business has grown.","På tide å":"Time to","fornye uttrykket.":"renew its identity.","En sterk start.":"A strong start.","Et uttrykk som":"An identity that","fungerer.":"works.","Fra en liten teknisk jobb til en komplett visuell identitet. Alle priser er startpriser. Endelig pris avhenger av omfang.":"From a small technical job to a complete visual identity. All prices are starting prices. The final price depends on scope.","Ny virksomhet":"New business","Eksisterende virksomhet":"Existing business","Små oppgaver":"Small tasks","I bevegelse":"In motion","Design & Production":"Design & Production","Et helt uttrykk fra bunnen.":"A complete identity from scratch.","Du trenger ikke alltid noe helt nytt. Oppdater det du allerede har.":"You don’t always need something completely new. Update what you already have.","Du trenger ikke alltid et nytt design. Kanskje du bare trenger å få det du har til å fungere.":"You don’t always need a new design. Maybe you just need what you have to work.","Identiteten din, i bevegelse.":"Your identity, in motion.","Dette får du":"What you get","Pris fra":"From","Lukk":"Close","Hei, jeg er Olga.":"Hi, I’m Olga.","Grafisk designer med":"Graphic designer with","års erfaring og kunder fra":"years of experience and clients from","land.":"countries.","Jeg skaper visuelle løsninger som hjelper bedrifter med å bli synlige, gjenkjennelige og nå målene sine.":"I create visual solutions that help businesses become visible, recognisable and reach their goals.","La oss skape noe sammen.":"Let’s create something together.","Navn*":"Name*","E-post*":"Email*","Telefon (valgfritt)":"Phone (optional)","Valgt tjeneste (valgfritt)":"Selected service (optional)","Melding*":"Message*","Vedlegg (valgfritt)":"Attachment (optional)","Velg fil":"Choose file","Ingen fil valgt":"No file chosen","Send forespørsel":"Send request","Sender …":"Sending …","Takk! Meldingen din er sendt.":"Thank you! Your message has been sent.","Noe gikk galt. Prøv igjen.":"Something went wrong. Please try again.","Fyll ut dette feltet.":"Please fill out this field.","Skriv inn en gyldig e-postadresse.":"Please enter a valid email address.","Grafisk designstudio":"Graphic design studio","Personvern":"Privacy","Informasjonskapsler":"Cookies"};
+var EN=false,TE={"Design · Branding · Visuell identitet":"Design · Branding · Visual identity","Arbeid":"Work","Tjenester":"Services","Om meg":"About me","Kontakt":"Contact","Kontakt meg":"Get in touch","Bedriften din har vokst.":"Your business has grown.","På tide å":"Time to","fornye uttrykket.":"renew its identity.","En sterk start.":"A strong start.","Et uttrykk som":"An identity that","fungerer.":"works.","Fra en liten teknisk jobb til en komplett visuell identitet. Alle priser er startpriser. Endelig pris avhenger av omfang.":"From a small technical job to a complete visual identity. All prices are starting prices. The final price depends on scope.","Ny virksomhet":"New business","Eksisterende virksomhet":"Existing business","Små oppgaver":"Small tasks","I bevegelse":"In motion","Design & Production":"Design & Production","Et helt uttrykk fra bunnen.":"A complete identity from scratch.","Du trenger ikke alltid noe helt nytt. Oppdater det du allerede har.":"You don’t always need something completely new. Update what you already have.","Du trenger ikke alltid et nytt design. Kanskje du bare trenger å få det du har til å fungere.":"You don’t always need a new design. Maybe you just need what you have to work.","Identiteten din, i bevegelse.":"Your identity, in motion.","Dette får du":"What you get","Pris fra":"From","Lukk":"Close","Hei, jeg er Olga.":"Hi, I’m Olga.","Grafisk designer med":"Graphic designer with","års erfaring og kunder fra":"years of experience and clients from","land.":"countries.","Jeg skaper visuelle løsninger som hjelper bedrifter med å bli synlige, gjenkjennelige og nå målene sine.":"I create visual solutions that help businesses become visible, recognisable and reach their goals.","La oss skape noe sammen.":"Let’s create something together.","Navn*":"Name*","E-post*":"Email*","Telefon (valgfritt)":"Phone (optional)","Valgt tjeneste (valgfritt)":"Selected service (optional)","Melding*":"Message*","Vedlegg (valgfritt)":"Attachment (optional)","Velg fil":"Choose file","Ingen fil valgt":"No file chosen","Send forespørsel":"Send request","Sender …":"Sending …","Takk! Meldingen din er sendt.":"Thank you! Your message has been sent.","Noe gikk galt. Prøv igjen.":"Something went wrong. Please try again.","Fyll ut dette feltet.":"Please fill out this field.","Skriv inn en gyldig e-postadresse.":"Please enter a valid email address.","Grafisk designstudio":"Graphic design studio","Personvern":"Privacy","Informasjonskapsler":"Cookies"};
 function L(k){return EN&&TE[k]||k}
 function apply(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n,a=[];
  while(n=w.nextNode()){var P=n.parentNode;if(!n.nodeValue.trim()||/^(SCRIPT|STYLE)$/.test(P.tagName)||P.closest('.kin'))continue;a.push(n)}
