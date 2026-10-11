@@ -80,16 +80,18 @@ section{padding:clamp(72px,11vw,150px) 0}
 /* work: 3 стовпчики по 2 плитки; hover = 80 %, клік = 90 % ширини */
 .work{display:flex;gap:12px;height:min(72vh,620px)}
 .col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:12px;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
-.tile{position:relative;flex:1 1 0;min-height:0;overflow:hidden;cursor:pointer;background:#e9e8e1;-webkit-tap-highlight-color:transparent}
-.tile .img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.tile:after{content:"";position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(transparent,rgba(30,30,30,.62));pointer-events:none}
-.tile h3{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;margin:0;color:#fff;font-size:clamp(14px,1.2vw,18px);font-weight:300;letter-spacing:.02em;line-height:1.25;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;transition:opacity .4s}
+.tile{position:relative;flex:1 1 0;min-height:0;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;gap:8px;-webkit-tap-highlight-color:transparent;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
+.tile .img{flex:1 1 0;min-height:0;width:100%;object-fit:cover;display:block;background:#e9e8e1}
+
+.tile h3{flex:none;margin:0;color:var(--ink);font-size:clamp(14px,1.2vw,17px);font-weight:300;letter-spacing:.01em;line-height:1.25;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;transition:opacity .4s}
 @media(min-width:901px){
 .work:not(.has-open):hover .col{flex:1}
-.work:not(.has-open) .col:hover,.work:not(.has-open) .col:focus-within{flex:8}
+.work:not(.has-open) .col:has(.tile:hover),.work:not(.has-open) .col:has(.tile:focus-visible){flex:8}
+.work:not(.has-open) .col:has(.tile:hover) .tile:hover,.work:not(.has-open) .col:has(.tile:focus-visible) .tile:focus-visible{flex:8}
 .work.has-open .col{flex:1}
 .work.has-open .col.open{flex:18}
-.work:hover:not(.has-open) .col:not(:hover):not(:focus-within) h3,.work.has-open .col:not(.open) h3{opacity:0}
+.work.has-open .tile.open{flex:18}
+.work:hover:not(.has-open) .col:not(:has(.tile:hover)):not(:has(.tile:focus-visible)) h3,.work.has-open .col:not(.open) h3{opacity:0}
 }
 .tile.open{cursor:zoom-out}
 .tile.open:before{content:"Lukk";position:absolute;top:16px;left:16px;z-index:2;color:#fff;font-size:14px;letter-spacing:.06em;text-shadow:0 1px 12px rgba(0,0,0,.4)}
@@ -144,7 +146,12 @@ section{padding:clamp(72px,11vw,150px) 0}
 @keyframes kin{0%{transform:scale(1);color:var(--ink)}11%,15%{transform:scale(2);color:var(--lime)}21%,100%{transform:scale(1);color:var(--ink)}}
 @media(hover:none){.kin .ch{animation:none}}
 /* about+contact */
-.ac{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,110px);align-items:start}
+.ac{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,110px);align-items:stretch;background:#fff;border:1px solid var(--line);padding:clamp(24px,4vw,56px)}
+.about{display:flex;flex-direction:column}
+.about .social{margin-top:auto;padding-top:26px}
+form{display:flex;flex-direction:column}
+form .fld:has(textarea){flex:1;display:flex;flex-direction:column}
+form textarea{flex:1}
 .portrait{aspect-ratio:4/5;background:linear-gradient(160deg,#d9d8d1,#b9b8b0);display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:14px;margin-bottom:32px;max-width:420px}
 .about h2{font-size:clamp(36px,4.6vw,64px);margin-bottom:20px}
 .about strong{font-weight:600}
@@ -257,7 +264,7 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
  <div class="panel" id="panel" role="region" aria-live="polite" aria-label="Tjenestedetaljer" hidden><button class="x" type="button">Lukk</button><div><span class="cat"></span><h3></h3><p></p></div><div><h4>Dette får du</h4><ul></ul><div class="price"><small>Pris fra</small><span></span></div><a class="btn" href="#kontakt"></a></div></div>
 </div></section>
 
-<section id="om" style="padding-top:0"><div class="wrap ac" id="kontakt">
+<section id="om" style="padding-top:0"><div class="wrap"><div class="ac" id="kontakt">
  <div class="about">
   <div class="pf"><img class="portrait" src="images/portret.webp" alt="Portrett av Olga" loading="lazy" decoding="async"><h2>Hei, jeg er Olga.</h2></div>
   <p>Grafisk designer med <strong>8</strong> års erfaring og kunder fra <strong>6</strong> land.</p>
@@ -275,7 +282,7 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
   <div class="fld"><label for="f">Vedlegg (valgfritt)</label><div class="file"><input id="f" name="attachment" type="file"><label class="fbtn" for="f">Velg fil</label><span id="fn">Ingen fil valgt</span></div></div>
   <button class="btn" type="submit">Send forespørsel</button>
  </form>
-</div></section>
+</div></div></section>
 </main>
 
 <footer><div class="wrap">
@@ -379,7 +386,7 @@ addEventListener('DOMContentLoaded',function(){try{if(localStorage.getItem('om-l
 })();
 
 (function(){var w=document.querySelector('.work'),t=[].slice.call(w.querySelectorAll('.tile'));
- function set(o){t.forEach(function(x){var on=x===o;x.classList.toggle('open',on);x.setAttribute('aria-expanded',on);x.parentNode.classList.toggle('open',on||(o&&x.parentNode===o.parentNode))});w.classList.toggle('has-open',!!o)}
+ function set(o){t.forEach(function(x){var on=x===o;x.classList.toggle('open',on);x.setAttribute('aria-expanded',on);});[].forEach.call(w.querySelectorAll('.col'),function(c){c.classList.toggle('open',!!(o&&c===o.parentNode))});w.classList.toggle('has-open',!!o)}
  t.forEach(function(x){x.addEventListener('click',function(){var was=x.classList.contains('open');set(was?null:x);if(!was&&innerWidth<=900)setTimeout(function(){x.scrollIntoView({behavior:'smooth',block:'nearest'})},350)});
   x.parentNode.addEventListener('mouseleave',function(){if(x.classList.contains('open')&&matchMedia('(hover:hover)').matches)set(null)});
   x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();x.click()}})});
