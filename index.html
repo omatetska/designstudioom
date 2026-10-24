@@ -22,7 +22,7 @@
 <link rel="preload" href="fonts/file-2.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="google-site-verification" content="6IoMY8Kp87LEO9DWv9DmkbsmEhGU4IPBmXGGVtuRXSU" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://designstudioom.no/#studio","name":"Designstudio OM","url":"https://designstudioom.no/","image":"https://designstudioom.no/images/hero-01.webp","logo":"https://designstudioom.no/images/logo%20svart.svg","description":"Grafisk designstudio i Porsgrunn: logo, visuell identitet, redesign, trykk, skilt og bilprofilering for bedrifter i hele Norge.","telephone":"+4796884878","email":"studio.g.d.om@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Porsgrunn","addressRegion":"Telemark","addressCountry":"NO"},"areaServed":[{"@type":"City","name":"Porsgrunn"},{"@type":"Country","name":"Norge"}],"founder":{"@type":"Person","name":"Olga"},"knowsAbout":["Grafisk design","Branding","Visuell identitet","Redesign","Skilt","Bilprofilering","Motion design"],"sameAs":["https://www.facebook.com/profile.php?id=61595099075917"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Tjenester","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo og stil"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Komplett identitet"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Designmanual"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo-oppgradering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ny identitet"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Visittkort"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Flyer og plakat"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Meny"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Brosjyre"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Katalog og magasin"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Skilt og stands"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bilprofilering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Sosiale medier"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Annonse"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nettside (design)"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Skarpe filer og trykkeklargjøring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo-animasjon"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Animert innlegg"}}]}}
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://designstudioom.no/#studio","name":"Designstudio OM","url":"https://designstudioom.no/","image":"https://designstudioom.no/images/hero-01.webp","logo":"https://designstudioom.no/images/logo%20svart.svg","description":"Grafisk designstudio i Porsgrunn: logo, visuell identitet, redesign, trykk, skilt og bilprofilering for bedrifter i hele Norge.","telephone":"+4796884878","email":"studio.g.d.om@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Porsgrunn","addressRegion":"Telemark","addressCountry":"NO"},"areaServed":[{"@type":"City","name":"Porsgrunn"},{"@type":"Country","name":"Norge"}],"founder":{"@type":"Person","name":"Olga"},"knowsAbout":["Grafisk design","Branding","Visuell identitet","Redesign","Skilt","Bilprofilering","Motion design"],"sameAs":["https://www.facebook.com/profile.php?id=61595099075917"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Tjenester","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo og visittkort"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Alt du trenger for å starte"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Oppfrisk logoen"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Skarp logo"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Visittkort"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Flyer og plakat"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Meny"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Brosjyre"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Katalog og magasin"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Annonse i avis og magasin"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Skilt og stands"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bilprofilering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Sosiale medier"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Nettside (design)"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Annonse på nett og sosiale medier"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo-animasjon"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Animert innlegg"}}]}}
 </script>
 <style>
 @font-face{font-family:"Albert Sans";src:url("fonts/file-1.woff2") format("woff2");font-weight:200;font-style:normal;font-display:swap}
@@ -85,24 +85,44 @@ img.portrait{display:block;width:100%;object-fit:cover;object-position:50% 15%;b
 /* sections */
 section{padding:clamp(72px,11vw,150px) 0}
 .title{font-size:clamp(40px,6vw,88px);margin-bottom:clamp(32px,5vw,64px)}
-/* work: 3 стовпчики по 2 плитки; hover = 80 %, клік = 90 % ширини */
-.work{display:flex;gap:24px;height:min(72vh,620px)}
-.col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:24px;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
-.tile{position:relative;flex:1 1 0;min-height:0;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;gap:8px;-webkit-tap-highlight-color:transparent;transition:flex .8s cubic-bezier(.2,.7,.2,1)}
-.tile .img{flex:1 1 0;min-height:0;width:100%;object-fit:cover;display:block;background:var(--ivory)}
-
-.tile h3{flex:none;margin:0;color:var(--ink);font-size:clamp(14px,1.2vw,17px);font-weight:300;letter-spacing:.01em;line-height:1.25;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;transition:opacity .4s}
-@media(min-width:901px){
-.work:not(.has-open):hover .col{flex:1}
-.work:not(.has-open) .col:has(.tile:hover),.work:not(.has-open) .col:has(.tile:focus-visible){flex:8}
-.work:not(.has-open) .col:has(.tile:hover) .tile:hover,.work:not(.has-open) .col:has(.tile:focus-visible) .tile:focus-visible{flex:8}
-.work.has-open .col{flex:1}
-.work.has-open .col.open{flex:18}
-.work.has-open .tile.open{flex:18}
-.work:hover:not(.has-open) .col:not(:has(.tile:hover)):not(:has(.tile:focus-visible)) h3,.work.has-open .col:not(.open) h3{opacity:0}
-}
-.tile.open{cursor:zoom-out}
-.tile.open:before{content:"Lukk";position:absolute;top:16px;left:16px;z-index:2;color:#fff;font-size:14px;letter-spacing:.06em;text-shadow:0 1px 12px rgba(0,0,0,.4)}
+/* arbeid: 3D-karusell */
+#arbeid{overflow:hidden}
+.cf{position:relative;--h:clamp(400px,46vw,580px)}
+.cf-stage{position:relative;height:var(--h);perspective:1800px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.cf-card{all:unset;box-sizing:border-box;position:absolute;top:0;left:50%;height:100%;aspect-ratio:4/5;border:1px solid var(--char);border-radius:16px;overflow:hidden;background:var(--ivory);cursor:pointer;box-shadow:0 34px 60px -34px rgba(20,20,22,.45);transform-origin:50% 60%;transition:transform .75s var(--ease),opacity .6s ease,filter .6s ease;will-change:transform;-webkit-tap-highlight-color:transparent}
+.cf.drag .cf-card{transition:none}
+.cf-card:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.cf-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none}
+.cf-cap{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:6px;padding:72px 22px 22px;color:#fff;background:linear-gradient(transparent,rgba(20,20,22,.78))}
+.cf-type{font:400 11px/1.3 var(--f);letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.cf-name{font:200 clamp(24px,2.4vw,36px)/1.05 var(--f);letter-spacing:-.01em}
+.cf-num{position:absolute;right:22px;bottom:24px;font:300 13px var(--f);color:#fff;opacity:0;transition:opacity .5s}
+.cf-zoom{position:absolute;top:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font:400 13px/1 var(--f);color:#fff;background:rgba(255,255,255,.18);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.35);opacity:0;transition:opacity .5s}
+.cf-zoom:before{content:"⤢";font-size:15px}
+.cf-card.on .cf-num,.cf-card.on .cf-zoom{opacity:1}
+.cf-card:not(.on) .cf-name{font-size:clamp(18px,1.6vw,24px)}
+.cf-bar{display:flex;align-items:center;gap:14px;width:min(440px,100%);margin:clamp(26px,3vw,40px) auto 0;padding:8px;border:1px solid var(--line);border-radius:999px;background:#fff}
+.cf-bar button{all:unset;box-sizing:border-box;flex:none;width:42px;height:42px;display:flex;align-items:center;justify-content:center;border:1px solid var(--char);border-radius:50%;font:200 20px/1 var(--f);cursor:pointer;transition:background .3s,color .3s}
+.cf-bar button:hover{background:var(--char);color:#fff}
+.cf-bar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.cf-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;text-align:center}
+.cf-info b{font-weight:400;font-size:16px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cf-info span{font-size:13px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cf-dots{display:flex;justify-content:center;gap:8px;margin-top:16px}
+.cf-dots button{all:unset;width:6px;height:6px;border-radius:3px;background:rgba(65,64,66,.3);cursor:pointer;transition:width .4s var(--ease),background .4s}
+.cf-dots button.on{width:22px;background:var(--accent)}
+.cf-dots button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:640px){.cf{--h:min(98vw,440px)}.cf-cap{padding:56px 16px 16px}.cf-num{right:16px;bottom:18px}}
+/* arbeid: fullskjerm */
+.lb{position:fixed;inset:0;z-index:70;display:flex;align-items:center;justify-content:center;gap:12px;padding:64px 12px 24px;background:rgba(11,11,12,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);animation:fade .3s ease both}
+.lb[hidden]{display:none}
+.lb figure{margin:0;max-width:min(1200px,100%);display:flex;flex-direction:column;align-items:center;gap:14px;animation:open .45s var(--ease) both}
+.lb img{display:block;max-width:100%;max-height:calc(100vh - 150px);max-height:calc(100svh - 150px);object-fit:contain;border:1px solid var(--char);border-radius:12px;background:var(--ivory)}
+.lb figcaption{color:#fff;font-size:15px;text-align:center}
+.lb-x{position:fixed;top:14px;right:14px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:none;color:#fff;font:200 22px/1 var(--f);cursor:pointer}
+.lb-nav{flex:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:none;color:#fff;font:200 22px/1 var(--f);cursor:pointer}
+.lb-x:hover,.lb-nav:hover{background:#fff;color:var(--ink)}
+@media(max-width:640px){.lb{flex-wrap:wrap;align-content:center}.lb figure{order:-1;width:100%}}
 /* services */
 .lead{max-width:34em;margin:-24px 0 clamp(32px,5vw,64px);color:var(--mute)}
 .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
@@ -113,7 +133,8 @@ section{padding:clamp(72px,11vw,150px) 0}
 .head:after{content:"+";position:absolute;top:18px;right:22px;font-size:26px;font-weight:200;transition:transform .5s}
 .card.open .head:after{transform:rotate(45deg)}
 .card .tag{display:block;font-size:14px;line-height:1.3;height:1.3em;margin-bottom:56px}
-.card h3{font-size:clamp(18px,1.6vw,24px);line-height:1.15;height:1.15em;margin-bottom:14px;white-space:nowrap}
+.card h3{font-size:clamp(18px,1.6vw,24px);line-height:1.15;min-height:1.15em;margin:74px 0 14px}
+.card .head p .kin{display:inline-block}
 .card .head p{font-size:15px;line-height:1.5;opacity:.7;min-height:7.5em;margin:0}
 .body{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .65s cubic-bezier(.2,.7,.2,1),visibility .65s}
 .card.open .body{grid-template-rows:1fr;visibility:visible}
@@ -133,9 +154,14 @@ section{padding:clamp(72px,11vw,150px) 0}
 .c2 .tag{color:#a9b8e3}
 .c3{background:var(--accent);color:#fff;border-color:var(--accent)}
 .c4{background:var(--tint);border-color:var(--tint)}
-.panel{margin-top:16px;padding:clamp(22px,3vw,48px);background:#fff;border:1px solid var(--ink);display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(20px,5vw,72px);position:relative;animation:open .45s ease both}
-.panel[hidden]{display:none}
-@keyframes open{from{opacity:0;transform:translateY(10px)}}
+/* tjeneste: spretten vindu (modal) */
+.ov{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:clamp(12px,4vw,48px);background:rgba(11,11,12,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:fade .3s ease both;-webkit-tap-highlight-color:transparent}
+.ov[hidden]{display:none}
+@keyframes fade{from{opacity:0}}
+.dlg{position:relative;display:flex;width:min(980px,100%);max-height:100%;background:#fff;box-shadow:0 30px 80px -30px rgba(0,0,0,.5);animation:open .45s var(--ease) both}
+.panel{flex:1;min-width:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(20px,5vw,72px)}
+@keyframes open{from{opacity:0;transform:translateY(18px) scale(.98)}}
+body.lock{overflow:hidden}
 .panel .cat{display:block;font-size:14px;color:var(--mute);margin-bottom:10px}
 .panel h3{font-size:clamp(30px,3.6vw,52px);margin:0 0 14px}
 .panel p{max-width:30em}
@@ -144,16 +170,51 @@ section{padding:clamp(72px,11vw,150px) 0}
 .panel li{padding:8px 0;border-top:1px solid var(--line)}
 .price{font-size:26px;font-weight:200;margin-bottom:22px}
 .price small{font-size:14px;color:var(--mute);margin-right:8px}
-.x{position:absolute;top:14px;right:18px;background:none;border:0;font:300 14px var(--f);cursor:pointer;text-decoration:underline;color:var(--mute)}
+.pk{display:inline-block;margin:0 0 12px;padding:5px 9px;font:500 11px/1 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:var(--tint)}
+.pk[hidden]{display:none}
+.eta{font-size:14px;color:var(--mute);margin:-4px 0 18px}
+.note{font-size:13px;line-height:1.45;color:var(--mute);margin-top:16px}
+.eta[hidden],.note[hidden]{display:none}
+.s button{align-items:baseline}
+.s button small{margin-left:auto;flex:none;font:500 10px/1 var(--f);letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.price .vat{display:block;margin-top:2px;font:300 12px/1.3 var(--f);letter-spacing:.02em;color:var(--mute)}
+.x{position:absolute;top:10px;right:10px;z-index:2;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:50%;font:200 22px/1 var(--f);color:var(--ink);cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.x:hover{background:var(--ink);border-color:var(--ink);color:#fff}
 @media(max-width:1100px){.svc{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:900px){.panel{grid-template-columns:1fr}}
-@media(max-width:640px){.svc{grid-template-columns:1fr}.card .tag{margin-bottom:28px}.card .head p{min-height:0}}
+@media(max-width:900px){.panel{grid-template-columns:1fr;gap:24px}}
+@media(max-width:640px){.panel{padding:56px 20px 24px}.panel h3{font-size:30px}.panel ul{margin-bottom:14px}.panel li{padding:6px 0;font-size:15px}.price{margin-bottom:16px}.panel .btn{display:block;text-align:center}}
+@media(max-width:640px){.svc{grid-template-columns:1fr}.card h3{margin-top:44px}.card .head p{min-height:0}}
 /* quick picks */
 .quick{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin:0 0 clamp(20px,3vw,32px)}
+/* søk */
+.hact{display:flex;align-items:center;gap:12px}
+.sbtn{all:unset;box-sizing:border-box;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;cursor:pointer;color:var(--ink);transition:background .3s}
+.sbtn:hover,.sbtn[aria-expanded=true]{background:var(--tint)}
+.sbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.hs{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:14px 0 18px;box-shadow:0 20px 40px -30px rgba(0,0,0,.35);animation:open .35s var(--ease) both}
+.hs[hidden]{display:none}
+.sf{position:relative;display:flex;align-items:center}
+.sf svg{position:absolute;left:14px;pointer-events:none;color:var(--mute)}
+.sf input{font:300 16px var(--f);padding:11px 16px 11px 44px;border:1px solid var(--ink);border-radius:2px;background:#fff;-webkit-appearance:none;appearance:none}
+.sf input:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.sf input::placeholder{color:var(--mute)}
+.qs{position:relative;flex:1 1 280px;max-width:480px;min-width:0}
+.qbr{flex-basis:100%;height:0}
+.qs .sres{position:absolute;top:calc(100% + 6px);left:0;width:max(100%,340px);max-width:calc(100vw - 40px);z-index:30;background:#fff;border:1px solid var(--char);box-shadow:0 24px 50px -28px rgba(31,33,35,.5)}
+.sres{list-style:none;padding:6px 0;margin:0;max-height:min(360px,60vh);overflow-y:auto}
+.hs .sres{margin-top:10px;border-top:1px solid var(--line)}
+.sres[hidden]{display:none}
+.sres button{all:unset;box-sizing:border-box;width:100%;display:flex;flex-direction:column;gap:2px;padding:10px 16px;cursor:pointer}
+.sres button b{font-weight:400;font-size:16px}
+.sres button small{font-size:13px;color:var(--mute)}
+.sres button:hover,.sres button.act{background:var(--tint)}
+.sres .none{padding:10px 16px;font-size:15px;color:var(--mute)}
+.sres .none a{color:var(--accent);text-decoration:underline}
+@media(max-width:640px){.qs{flex:1 1 100%;min-width:0}.qs .sres{width:100%}}
 .qlbl{font-size:clamp(20px,2vw,28px);font-weight:200;letter-spacing:-.01em;margin-right:10px}
-.quick button{all:unset;box-sizing:border-box;cursor:pointer;font:300 15px/1 var(--f);padding:12px 18px;border:1px solid var(--ink);border-radius:2px;transition:background .3s,color .3s,border-color .3s,transform .25s}
-.quick button:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
-.quick button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.quick>button{all:unset;box-sizing:border-box;cursor:pointer;font:300 15px/1 var(--f);padding:12px 18px;border:1px solid var(--ink);border-radius:2px;transition:background .3s,color .3s,border-color .3s,transform .25s}
+.quick>button:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
+.quick>button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 /* kinetic Motion heading */
 .kin .ch{display:inline-block;position:relative;transform-origin:50% 55%;will-change:transform;animation:kin 3.2s cubic-bezier(.65,0,.35,1) infinite;animation-delay:calc(var(--i)*.33s)}
 .kin.paused .ch{animation-play-state:paused}
@@ -190,6 +251,17 @@ input:focus,textarea:focus{outline:0;box-shadow:0 2px 0 var(--accent);border-col
 .file input:focus-visible+.fbtn{outline:2px solid var(--ink);outline-offset:3px}
 #fn{font-size:14px;color:var(--mute);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hp{position:absolute;left:-9999px}
+.fld.hit input{box-shadow:0 2px 0 var(--accent);transition:box-shadow .3s}
+@media(max-width:640px){
+ .ac{padding:22px 18px 26px;gap:48px}
+ form h2{font-size:30px;margin-bottom:18px}
+ .fld{margin-bottom:14px}
+ label{font-size:13px;margin-bottom:0}
+ input,textarea{font-size:16px;padding:6px 0}
+ textarea{min-height:84px}
+ .file{padding:2px 0}
+ form .btn{width:100%;padding:14px 24px}
+}
 /* footer */
 footer{border-top:1px solid var(--line);padding:56px 0 32px;font-size:15px}
 .fg{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px}
@@ -208,10 +280,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;font-size:15px}
  .txt{justify-content:flex-start;padding:28px var(--pad) 72px;gap:22px}
  .hero .h1{font-size:clamp(30px,8vw,44px)}
  nav{display:none}
- .work{flex-direction:column;height:auto}
- .col{flex:none!important;flex-direction:column}
- .tile{flex:none;height:190px;transition:height .5s}
- .tile.open{height:400px}
  .svc,.ac{grid-template-columns:1fr}
  .card{min-height:0}
  .portrait{max-width:none;aspect-ratio:4/3}
@@ -229,17 +297,18 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
 .lang button[aria-pressed=true]{box-shadow:inset 0 -2px var(--accent)}
 .lang button:focus-visible{outline:2px solid var(--ink)}
 @media(max-width:900px){header.mo .lang{margin:14px 0 0 -7px}}
-@media(max-width:560px){.bar>.btn{display:none}}
+@media(max-width:560px){.hact .btn{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 <header><div class="wrap bar">
  <a class="brand" href="#top" aria-label="Designstudio OM, til toppen"><img src="images/logo%20svart.svg" alt="Designstudio OM" decoding="async"></a>
- <nav aria-label="Hovedmeny"><a href="#arbeid">Arbeid</a><a href="#tjenester">Tjenester</a><a href="#om">Om meg</a><a href="#kontakt">Kontakt</a><div class="lang" role="group" aria-label="Språk"><button type="button" data-l="no" aria-pressed="true">NO</button><button type="button" data-l="en" aria-pressed="false">EN</button></div></nav>
- <a class="btn sm" href="#kontakt">Kontakt meg</a>
- <button class="bgr" type="button" aria-label="Meny" aria-expanded="false"></button>
-</div></header>
+ <nav aria-label="Hovedmeny"><a href="#tjenester">Tjenester</a><a href="#arbeid">Arbeid</a><a href="#om">Om meg</a><a href="#kontakt">Kontakt</a><div class="lang" role="group" aria-label="Språk"><button type="button" data-l="no" aria-pressed="true">NO</button><button type="button" data-l="en" aria-pressed="false">EN</button></div></nav>
+ <div class="hact"><button class="sbtn" type="button" aria-label="Søk" aria-expanded="false" aria-controls="hs"><svg viewBox='0 0 24 24' width='20' height='20' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6.5'/><path d='M15.5 15.5 20 20'/></svg></button><a class="btn sm" href="#kontakt">Kontakt meg</a><button class="bgr" type="button" aria-label="Meny" aria-expanded="false"></button></div>
+</div>
+<div class="hs" id="hs" hidden><div class="wrap"><div class="sf"><svg viewBox='0 0 24 24' width='20' height='20' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6.5'/><path d='M15.5 15.5 20 20'/></svg><input type="search" id="hsq" autocomplete="off" enterkeyhint="search" aria-label="Søk etter tjeneste" aria-controls="hsr" aria-autocomplete="list"></div><ul class="sres" id="hsr" role="listbox" hidden></ul></div></div>
+</header>
 
 <main id="top">
 <div class="hero" aria-roledescription="carousel" aria-label="Introduksjon">
@@ -248,35 +317,31 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
  <div class="dots"><button class="on" aria-label="Slide 1"></button><button aria-label="Slide 2"></button></div>
 </div>
 
-<section id="arbeid"><div class="wrap">
- <h2 class="title">Arbeid</h2>
- <div class="work">
-  <div class="col">
-   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Nettside og sosiale medier – SUMIO"><img class="img" src="images/arbeid-02.webp" alt="Nettside og Instagram-profil for hudpleiemerket SUMIO" loading="lazy" decoding="async"><h3>Nettside og sosiale medier – SUMIO</h3></div>
-   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Visuell identitet – SUMIO"><img class="img" src="images/arbeid-01.webp" alt="Visuell identitet for hudpleiemerket SUMIO: produktemballasje, handleposer, visittkort, butikkfasade og plakat" loading="lazy" decoding="async"><h3>Visuell identitet – SUMIO</h3></div>
-  </div>
-  <div class="col">
-   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Visuell identitet – LUMA"><img class="img" src="images/arbeid-03.webp" alt="Visuell identitet for klesmerket LUMA: handlenett, ryggsekk, gaveeske og plakat på t-banestasjon" loading="lazy" decoding="async"><h3>Visuell identitet – LUMA</h3></div>
-   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Nettside og sosiale medier – LUMA"><img class="img" src="images/arbeid-04.webp" alt="Nettside og Instagram-profil for klesmerket LUMA" loading="lazy" decoding="async"><h3>Nettside og sosiale medier – LUMA</h3></div>
-  </div>
-  <div class="col">
-   <div class="tile" role="button" tabindex="0" aria-expanded="false" aria-label="Magasindesign – Your Life"><img class="img" src="images/arbeid-05.webp" alt="Magasindesign: forside og innsideoppslag for «Your Life Magazine»" loading="lazy" decoding="async"><h3>Magasindesign – Your Life</h3></div>
-   
-  </div>
+<section id="tjenester"><div class="wrap">
+ <h2 class="title">Tjenester</h2>
+ <p class="lead">Fra en liten teknisk jobb til en komplett visuell identitet. Alle priser er startpriser eks. mva. Endelig pris avhenger av omfang.</p>
+ <div class="quick" role="group" aria-label="Hurtigvalg"><span class="qlbl">Jeg trenger…</span><div class="qs"><div class="sf"><svg viewBox='0 0 24 24' width='20' height='20' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6.5'/><path d='M15.5 15.5 20 20'/></svg><input type="search" id="qsq" autocomplete="off" enterkeyhint="search" aria-label="Søk etter tjeneste" aria-controls="qsr" aria-autocomplete="list"></div><ul class="sres" id="qsr" role="listbox" hidden></ul></div><span class="qbr" aria-hidden="true"></span><button type="button" data-c="1" data-i="0">Visittkort</button><button type="button" data-c="1" data-i="1">Plakater og flyere</button><button type="button" data-c="1" data-i="2">Meny</button><button type="button" data-c="1" data-i="4">Kataloger og brosjyrer</button><button type="button" data-c="0" data-i="0">Logo</button><button type="button" data-c="2" data-i="0">Skilt og bil</button></div>
+ <div class="svc">
+  <article class="card c1"><button class="head" type="button" aria-expanded="false" aria-controls="b0"><h3>Logo</h3><p>Ny logo, eller en oppfrisking av den du har.</p></button><div class="body" id="b0"><div><ul class="s"></ul></div></div></article>
+  <article class="card c2"><button class="head" type="button" aria-expanded="false" aria-controls="b1"><h3>Trykksaker</h3><p>Alt som skal på papir.</p></button><div class="body" id="b1"><div><ul class="s"></ul></div></div></article>
+  <article class="card c3"><button class="head" type="button" aria-expanded="false" aria-controls="b2"><h3>Skilt og bil</h3><p>Synlig på gaten.</p></button><div class="body" id="b2"><div><ul class="s"></ul></div></div></article>
+  <article class="card c4"><button class="head" type="button" aria-expanded="false" aria-controls="b3"><h3>Nett og sosiale medier</h3><p>Det kundene ser på skjermen – også i <span class="kin" aria-label="bevegelse"><span aria-hidden="true"></span></span>.</p></button><div class="body" id="b3"><div><ul class="s"></ul></div></div></article>
  </div>
 </div></section>
 
-<section id="tjenester" style="padding-top:0"><div class="wrap">
- <h2 class="title">Tjenester</h2>
- <p class="lead">Fra en liten teknisk jobb til en komplett visuell identitet. Alle priser er startpriser eks. mva. Endelig pris avhenger av omfang.</p>
- <div class="quick" role="group" aria-label="Hurtigvalg"><span class="qlbl">Jeg trenger…</span><button type="button" data-c="2" data-i="0">Visittkort</button><button type="button" data-c="2" data-i="1">Plakater og flyere</button><button type="button" data-c="2" data-i="2">Meny</button><button type="button" data-c="2" data-i="4">Kataloger og brosjyrer</button><button type="button" data-c="0" data-i="0">Logo</button><button type="button" data-c="2" data-i="5">Skilt og bil</button></div>
- <div class="svc">
-  <article class="card c1"><button class="head" type="button" aria-expanded="false" aria-controls="b0"><span class="tag">Ny virksomhet</span><h3>Logo og profil</h3><p>Et helt uttrykk fra bunnen.</p></button><div class="body" id="b0"><div><ul class="s"></ul></div></div></article>
-  <article class="card c2"><button class="head" type="button" aria-expanded="false" aria-controls="b1"><span class="tag">Eksisterende virksomhet</span><h3>Oppdater det du har</h3><p>Du trenger ikke alltid noe helt nytt. Oppdater det du allerede har.</p></button><div class="body" id="b1"><div><ul class="s"></ul></div></div></article>
-  <article class="card c3"><button class="head" type="button" aria-expanded="false" aria-controls="b2"><span class="tag">Små oppgaver</span><h3>Trykk og reklame</h3><p>Trykksaker, skilt, bil og sosiale medier – ferdig til bruk.</p></button><div class="body" id="b2"><div><ul class="s"></ul></div></div></article>
-  <article class="card c4"><button class="head" type="button" aria-expanded="false" aria-controls="b3"><span class="tag">I bevegelse</span><h3 class="kin" aria-label="Animasjon"><span aria-hidden="true"><span class="ch" style="--i:0">A</span><span class="ch" style="--i:1">n</span><span class="ch" style="--i:2">i</span><span class="ch" style="--i:3">m</span><span class="ch" style="--i:4">a</span><span class="ch" style="--i:5">s</span><span class="ch" style="--i:6">j</span><span class="ch" style="--i:7">o</span><span class="ch" style="--i:8">n</span></span></h3><p>Identiteten din, i bevegelse.</p></button><div class="body" id="b3"><div><ul class="s"></ul></div></div></article>
+<section id="arbeid" style="padding-top:0"><div class="wrap">
+ <h2 class="title">Arbeid</h2>
+ <div class="cf" role="region" aria-roledescription="karusell" aria-label="Arbeid">
+  <div class="cf-stage">
+   <button class="cf-card" type="button" data-i="0"><img src="images/arbeid-02.webp" alt="Nettside og Instagram-profil for hudpleiemerket SUMIO" loading="lazy" decoding="async"><span class="cf-zoom">Se større</span><span class="cf-cap"><span class="cf-type">Nettside og sosiale medier</span><span class="cf-name">SUMIO</span></span><span class="cf-num">1 / 5</span></button>
+   <button class="cf-card" type="button" data-i="1"><img src="images/arbeid-01.webp" alt="Visuell identitet for hudpleiemerket SUMIO: produktemballasje, handleposer, visittkort, butikkfasade og plakat" loading="lazy" decoding="async"><span class="cf-zoom">Se større</span><span class="cf-cap"><span class="cf-type">Visuell identitet</span><span class="cf-name">SUMIO</span></span><span class="cf-num">2 / 5</span></button>
+   <button class="cf-card" type="button" data-i="2"><img src="images/arbeid-03.webp" alt="Visuell identitet for klesmerket LUMA: handlenett, ryggsekk, gaveeske og plakat på t-banestasjon" loading="lazy" decoding="async"><span class="cf-zoom">Se større</span><span class="cf-cap"><span class="cf-type">Visuell identitet</span><span class="cf-name">LUMA</span></span><span class="cf-num">3 / 5</span></button>
+   <button class="cf-card" type="button" data-i="3"><img src="images/arbeid-04.webp" alt="Nettside og Instagram-profil for klesmerket LUMA" loading="lazy" decoding="async"><span class="cf-zoom">Se større</span><span class="cf-cap"><span class="cf-type">Nettside og sosiale medier</span><span class="cf-name">LUMA</span></span><span class="cf-num">4 / 5</span></button>
+   <button class="cf-card" type="button" data-i="4"><img src="images/arbeid-05.webp" alt="Magasindesign: forside og innsideoppslag for «Your Life Magazine»" loading="lazy" decoding="async"><span class="cf-zoom">Se større</span><span class="cf-cap"><span class="cf-type">Magasindesign</span><span class="cf-name">Your Life</span></span><span class="cf-num">5 / 5</span></button>
+  </div>
+  <div class="cf-bar"><button class="cf-prev" type="button" aria-label="Forrige">‹</button><div class="cf-info" aria-live="polite"><b></b><span></span></div><button class="cf-next" type="button" aria-label="Neste">›</button></div>
+  <div class="cf-dots"></div>
  </div>
- <div class="panel" id="panel" role="region" aria-live="polite" aria-label="Tjenestedetaljer" hidden><button class="x" type="button">Lukk</button><div><span class="cat"></span><h3></h3><p></p></div><div><h4>Dette får du</h4><ul></ul><div class="price"><small>Pris fra</small><span></span></div><a class="btn" href="#kontakt"></a></div></div>
 </div></section>
 
 <section id="om" style="padding-top:0"><div class="wrap"><div class="ac" id="kontakt">
@@ -287,7 +352,7 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
   <p>Designstudio OM holder til i Porsgrunn og leverer logo, visuell identitet, redesign, trykk, skilt og bilprofilering til bedrifter i hele Norge.</p>
   <div class="social"><a href="tel:+4796884878">+47 968 84 878</a><a href="mailto:studio.g.d.om@gmail.com">studio.g.d.om@gmail.com</a><a href="https://www.facebook.com/profile.php?id=61595099075917" target="_blank" rel="noopener">Facebook</a></div>
  </div>
- <form action="https://formspree.io/f/meaoydbz" method="POST" enctype="multipart/form-data">
+ <form id="skjema" action="https://formspree.io/f/meaoydbz" method="POST" enctype="multipart/form-data">
   <h2>La oss skape noe sammen.</h2>
   <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
   <div class="fld"><label for="n">Navn*</label><input id="n" name="name" required autocomplete="name"></div>
@@ -301,27 +366,41 @@ header.mo .bgr:before{top:21px;transform:rotate(45deg)}header.mo .bgr:after{top:
 </div></div></section>
 </main>
 
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Arbeid">
+ <button class="lb-x" type="button" aria-label="Lukk">✕</button>
+ <button class="lb-nav lb-p" type="button" aria-label="Forrige">‹</button>
+ <figure><img alt=""><figcaption></figcaption></figure>
+ <button class="lb-nav lb-n" type="button" aria-label="Neste">›</button>
+</div>
+
+<div class="ov" id="ov" hidden>
+ <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="ptitle">
+  <button class="x" type="button" aria-label="Lukk">✕</button>
+  <div class="panel" id="panel"><div><span class="cat"></span><span class="pk" hidden></span><h3 id="ptitle"></h3><p class="pd"></p></div><div><h4>Dette får du</h4><ul></ul><p class="eta" hidden></p><div class="price"><small>Pris fra</small><span></span><em class="vat">eks. mva</em></div><a class="btn" href="#skjema"></a><p class="note" hidden></p></div></div>
+ </div>
+</div>
+
 <footer><div class="wrap">
  <div class="fg">
   <div><img class="flogo" src="images/logo%20svart.svg" alt="Designstudio OM" loading="lazy" decoding="async"></div>
-  <div><a href="#arbeid">Arbeid</a><a href="#tjenester">Tjenester</a><a href="#om">Om meg</a><a href="#kontakt">Kontakt</a></div>
+  <div><a href="#tjenester">Tjenester</a><a href="#arbeid">Arbeid</a><a href="#om">Om meg</a><a href="#kontakt">Kontakt</a></div>
   <div><a href="tel:+4796884878">+47 968 84 878</a><a href="mailto:studio.g.d.om@gmail.com">studio.g.d.om@gmail.com</a><a href="https://www.facebook.com/profile.php?id=61595099075917" target="_blank" rel="noopener">Facebook</a></div>
  </div>
  <div class="base"><span>© 2026 Designstudio OM</span><span>Org.nr. 000 000 000</span><a href="#">Personvern</a><a href="#">Informasjonskapsler</a></div>
 </div></footer>
 
 <script>
-var EN=false,TE={"Jeg trenger…":"I need…","Visittkort":"Business cards","Plakater og flyere":"Posters and flyers","Meny":"Menu","Kataloger og brosjyrer":"Catalogues and brochures","Logo":"Logo","Skilt og bil":"Signs and vehicles","Logo og profil":"Logo & profile","Oppdater det du har":"Update what you have","Trykk og reklame":"Print & advertising","Trykksaker, skilt, bil og sosiale medier – ferdig til bruk.":"Print, signage, vehicles and social media – ready to use.","Grafisk designstudio i Porsgrunn · Branding · Visuell identitet":"Graphic design studio in Porsgrunn · Branding · Visual identity","Designstudio OM holder til i Porsgrunn og leverer logo, visuell identitet, redesign, trykk, skilt og bilprofilering til bedrifter i hele Norge.":"Designstudio OM is based in Porsgrunn and delivers logos, visual identity, redesign, print, signage and vehicle branding to businesses across Norway.","Design · Branding · Visuell identitet":"Design · Branding · Visual identity","Arbeid":"Work","Tjenester":"Services","Om meg":"About me","Kontakt":"Contact","Kontakt meg":"Get in touch","Bedriften din har vokst.":"Your business has grown.","På tide å":"Time to","fornye uttrykket.":"renew its identity.","En sterk start.":"A strong start.","Et uttrykk som":"An identity that","fungerer.":"works.","Fra en liten teknisk jobb til en komplett visuell identitet. Alle priser er startpriser eks. mva. Endelig pris avhenger av omfang.":"From a small technical job to a complete visual identity. All prices are starting prices excl. VAT. The final price depends on scope.","Ny virksomhet":"New business","Eksisterende virksomhet":"Existing business","Små oppgaver":"Small tasks","I bevegelse":"In motion","Design & Production":"Design & Production","Et helt uttrykk fra bunnen.":"A complete identity from scratch.","Du trenger ikke alltid noe helt nytt. Oppdater det du allerede har.":"You don’t always need something completely new. Update what you already have.","Du trenger ikke alltid et nytt design. Kanskje du bare trenger å få det du har til å fungere.":"You don’t always need a new design. Maybe you just need what you have to work.","Identiteten din, i bevegelse.":"Your identity, in motion.","Dette får du":"What you get","Pris fra":"From","Lukk":"Close","Nettside og sosiale medier – SUMIO":"Website and social media – SUMIO","Visuell identitet – SUMIO":"Visual identity – SUMIO","Visuell identitet – LUMA":"Visual identity – LUMA","Nettside og sosiale medier – LUMA":"Website and social media – LUMA","Magasindesign – Your Life":"Magazine design – Your Life","Profilering – NM natt-orientering 2027":"Branding – NM night orienteering 2027","Hei, jeg er Olga.":"Hi, I’m Olga.","Grafisk designer med":"Graphic designer with","års erfaring og kunder fra":"years of experience and clients from","land.":"countries.","Jeg skaper visuelle løsninger som hjelper bedrifter med å bli synlige, gjenkjennelige og nå målene sine.":"I create visual solutions that help businesses become visible, recognisable and reach their goals.","La oss skape noe sammen.":"Let’s create something together.","Navn*":"Name*","E-post*":"Email*","Telefon (valgfritt)":"Phone (optional)","Valgt tjeneste (valgfritt)":"Selected service (optional)","Melding*":"Message*","Vedlegg (valgfritt)":"Attachment (optional)","Velg fil":"Choose file","Ingen fil valgt":"No file chosen","Send forespørsel":"Send request","Sender …":"Sending …","Takk! Meldingen din er sendt.":"Thank you! Your message has been sent.","Noe gikk galt. Prøv igjen.":"Something went wrong. Please try again.","Fyll ut dette feltet.":"Please fill out this field.","Skriv inn en gyldig e-postadresse.":"Please enter a valid email address.","Grafisk designstudio":"Graphic design studio","Personvern":"Privacy","Informasjonskapsler":"Cookies"};
+var EN=false,TE={"Jeg trenger…":"I need…","Visittkort":"Business cards","Plakater og flyere":"Posters and flyers","Meny":"Menu","Kataloger og brosjyrer":"Catalogues and brochures","Logo":"Logo","Skilt og bil":"Signs and vehicles","Logo og profil":"Logo & profile","Oppdater det du har":"Update what you have","Trykk og reklame":"Print & advertising","Trykksaker, skilt, bil og sosiale medier – ferdig til bruk.":"Print, signage, vehicles and social media – ready to use.","Grafisk designstudio i Porsgrunn · Branding · Visuell identitet":"Graphic design studio in Porsgrunn · Branding · Visual identity","Designstudio OM holder til i Porsgrunn og leverer logo, visuell identitet, redesign, trykk, skilt og bilprofilering til bedrifter i hele Norge.":"Designstudio OM is based in Porsgrunn and delivers logos, visual identity, redesign, print, signage and vehicle branding to businesses across Norway.","Design · Branding · Visuell identitet":"Design · Branding · Visual identity","Arbeid":"Work","Tjenester":"Services","Om meg":"About me","Kontakt":"Contact","Kontakt meg":"Get in touch","Bedriften din har vokst.":"Your business has grown.","På tide å":"Time to","fornye uttrykket.":"renew its identity.","En sterk start.":"A strong start.","Et uttrykk som":"An identity that","fungerer.":"works.","Fra en liten teknisk jobb til en komplett visuell identitet. Alle priser er startpriser eks. mva. Endelig pris avhenger av omfang.":"From a small technical job to a complete visual identity. All prices are starting prices excl. VAT. The final price depends on scope.","Ny virksomhet":"New business","Eksisterende virksomhet":"Existing business","Små oppgaver":"Small tasks","I bevegelse":"In motion","Design & Production":"Design & Production","Et helt uttrykk fra bunnen.":"A complete identity from scratch.","Du trenger ikke alltid noe helt nytt. Oppdater det du allerede har.":"You don’t always need something completely new. Update what you already have.","Du trenger ikke alltid et nytt design. Kanskje du bare trenger å få det du har til å fungere.":"You don’t always need a new design. Maybe you just need what you have to work.","Identiteten din, i bevegelse.":"Your identity, in motion.","Dette får du":"What you get","Pris fra":"From","Lukk":"Close","Se større":"View larger","Nettside og sosiale medier":"Website and social media","Visuell identitet":"Visual identity","Magasindesign":"Magazine design","Forrige":"Previous","Neste":"Next","Trykksaker":"Print","Alt som skal på papir.":"Everything that goes on paper.","Synlig på gaten.":"Visible on the street.","Nett og sosiale medier":"Web and social media","Ny logo, eller en oppfrisking av den du har.":"A new logo, or a refresh of the one you have.","Det kundene ser på skjermen – også i":"What your customers see on screen – also in","eks. mva":"excl. VAT","Nettside og sosiale medier – SUMIO":"Website and social media – SUMIO","Visuell identitet – SUMIO":"Visual identity – SUMIO","Visuell identitet – LUMA":"Visual identity – LUMA","Nettside og sosiale medier – LUMA":"Website and social media – LUMA","Magasindesign – Your Life":"Magazine design – Your Life","Profilering – NM natt-orientering 2027":"Branding – NM night orienteering 2027","Hei, jeg er Olga.":"Hi, I’m Olga.","Grafisk designer med":"Graphic designer with","års erfaring og kunder fra":"years of experience and clients from","land.":"countries.","Jeg skaper visuelle løsninger som hjelper bedrifter med å bli synlige, gjenkjennelige og nå målene sine.":"I create visual solutions that help businesses become visible, recognisable and reach their goals.","La oss skape noe sammen.":"Let’s create something together.","Navn*":"Name*","E-post*":"Email*","Telefon (valgfritt)":"Phone (optional)","Valgt tjeneste (valgfritt)":"Selected service (optional)","Melding*":"Message*","Vedlegg (valgfritt)":"Attachment (optional)","Velg fil":"Choose file","Ingen fil valgt":"No file chosen","Send forespørsel":"Send request","Sender …":"Sending …","Takk! Meldingen din er sendt.":"Thank you! Your message has been sent.","Noe gikk galt. Prøv igjen.":"Something went wrong. Please try again.","Fyll ut dette feltet.":"Please fill out this field.","Skriv inn en gyldig e-postadresse.":"Please enter a valid email address.","Grafisk designstudio":"Graphic design studio","Personvern":"Privacy","Informasjonskapsler":"Cookies"};
 function L(k){return EN&&TE[k]||k}
 function apply(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n,a=[];
  while(n=w.nextNode()){var P=n.parentNode;if(!n.nodeValue.trim()||/^(SCRIPT|STYLE)$/.test(P.tagName)||P.closest('.kin'))continue;a.push(n)}
  a.forEach(function(n){if(n._o===undefined||n._p!==n.nodeValue)n._o=n.nodeValue;var t=n._o.trim(),v=EN&&TE[t];n.nodeValue=v?n._o.replace(t,v):n._o;n._p=n.nodeValue})}
 function kin(w){var h=document.querySelector('.kin');if(!h)return;h.setAttribute('aria-label',w);h.firstChild.innerHTML=w.split('').map(function(c,i){return '<span class="ch" style="--i:'+i+'">'+c+'</span>'}).join('')}
-function setL(l){EN=l==='en';document.documentElement.lang=EN?'en':'nb';apply();kin(EN?'Animation':'Animasjon');if(window.svcLang)svcLang();
+function setL(l){EN=l==='en';document.documentElement.lang=EN?'en':'nb';apply();kin(EN?'motion':'bevegelse');if(window.svcLang)svcLang();if(window.workLang)workLang();if(window.searchLang)searchLang();
  [].forEach.call(document.querySelectorAll('.lang button'),function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
  try{localStorage.setItem('om-lang',l)}catch(e){}}
 [].forEach.call(document.querySelectorAll('.lang button'),function(b){b.addEventListener('click',function(){setL(b.dataset.l)})});
-addEventListener('DOMContentLoaded',function(){try{if(localStorage.getItem('om-lang')==='en')setL('en')}catch(e){}});
+addEventListener('DOMContentLoaded',function(){kin('bevegelse');try{if(localStorage.getItem('om-lang')==='en')setL('en')}catch(e){}});
 </script>
 <script>
 (function(){var H=document.querySelector('header'),B=H.querySelector('.bgr');
@@ -337,61 +416,200 @@ addEventListener('DOMContentLoaded',function(){try{if(localStorage.getItem('om-l
 })();
 
 (function(){
- var D=[[["Logo","Logoen er ansiktet til bedriften din – et enkelt merke som kundene kjenner deg igjen på.",["2–3 forslag å velge mellom","Rettelser til du er fornøyd (inntil 3 runder)","Ferdige filer til nett og trykk, i farger og svart-hvitt"],"2 900","Bestill logo"],["Logo og stil","Logo pluss fargene, skriftene og bildestilen du skal bruke overalt – slik at alt ser ut som det kommer fra samme bedrift.",["Logo i flere versjoner","Fargepalett og to skrifter","Enkle eksempler på bruk (f.eks. visittkort og sosiale medier)","Alle filer klare til bruk"],"5 900","Bestill logo og stil"],["Komplett identitet","Hele pakken: logo, stil og ferdige maler, samlet i en enkel designmanual.",["Alt i «Logo og stil»","Maler til visittkort, brevark og sosiale medier","Designmanual med enkle regler","Eksempler på hvordan alt ser ut i bruk"],"9 900","Bestill komplett identitet"],["Designmanual","En kort guide som viser hvordan logo, farger og skrifter skal brukes – så det blir riktig hver gang, uansett hvem som lager noe for deg.",["Hvordan logoen skal brukes (og ikke brukes)","Fargekoder for skjerm og trykk","Skrifter og enkle regler","PDF du kan sende til trykkeri og samarbeidspartnere"],"1 900","Bestill designmanual"]],[["Logo-oppgradering","Du beholder det kundene kjenner igjen, men gjør logoen skarpere og mer moderne.",["Gjennomgang av dagens logo","1–2 forslag til oppdatert logo","Nye filer til nett og trykk"],"2 400","Bestill logo-oppgradering"],["Ny identitet","Fornyer hele uttrykket: logo, farger og skrifter, så alt oppleves ferskt og helhetlig.",["Gjennomgang av alt du bruker i dag","Ny logo, nye farger og skrifter","Oppdaterte maler og designmanual"],"7 900","Bestill ny identitet"]],[["Visittkort","Et ferdig oppsett av visittkortet ditt, klart til trykk.",["Design foran og bak","Filer klare for trykkeri","Én runde med rettelser"],"590","Bestill visittkort"],["Flyer og plakat","Et design som får folk til å stoppe opp og lese – til utdeling eller oppslag.",["Ferdig design i ønsket størrelse (A6–A3)","Filer klare for trykkeri","To runder med rettelser"],"1 200","Bestill flyer eller plakat"],["Meny","En ryddig og lettlest meny som passer stilen til stedet ditt.",["Design av menyen i ønsket format","Klar for trykk og for nett","To runder med rettelser","Prisen regnes per side"],"590","Bestill meny","per side"],["Brosjyre","Tydelig oppsett som forteller om bedriften din på noen få sider.",["Layout for 4 sider (brettet A4 eller A5)","Tekst og bilder satt opp ryddig","Filer klare for trykk"],"1 900","Bestill brosjyre"],["Katalog og magasin","Layout av flere sider med tekst og bilder – fra medlemsblad til produktkatalog.",["Oppsett av sider og felles mal","Bilder og tekster satt opp","Filer klare for trykk","Prisen regnes per side"],"490","Bestill katalog eller magasin","per side"],["Skilt og stands","Design til rollup, beachflagg, banner og skilt på fasaden.",["Design tilpasset format og materiale","Mål og filer klare for produsent","Forslag til plassering"],"1 200","Bestill skilt eller stand"],["Bilprofilering","Bilen din som reklame: logo og kontaktinfo designet slik at det leses på avstand.",["Design tilpasset akkurat din bil","Visualisering på bilen før du bestiller","Filer klare for folie og trykk"],"2 400","Bestill bilprofilering"],["Annonse","Design av en annonse til avis, magasin eller nett.",["Design i riktig format","Filer til trykk eller nett","To runder med rettelser"],"1 200","Bestill annonse"],["Sosiale medier","Maler du kan bruke om og om igjen – så innleggene dine alltid ser ut som deg.",["Fem maler til innlegg og stories","Profilbilde og forsidebilde","Enkel veiledning (f.eks. i Canva)"],"2 400","Bestill sosiale medier"],["Nettside (design)","Design av en enkel, tydelig nettside som fungerer på mobil og PC.",["Design av forside og undersider","Tilpasset mobil og PC","Tilpasset din logo og dine farger"],"5 500","Bestill nettside"],["Skarpe filer og trykkeklargjøring","Har du en logo eller grafikk som blir uskarp når den forstørres? Jeg tegner den opp på nytt, så den blir skarp i alle størrelser.",["Logoen tegnes opp på nytt","Filer til nett og trykk (AI, EPS, PDF, SVG, PNG)","Farger og svart-hvitt-versjoner","Filer klare for trykk"],"490","Bestill skarpe filer"]],[["Logo-animasjon","Logoen din i bevegelse – en kort animasjon til nettside og sosiale medier.",["5–10 sekunders animasjon","Versjoner til nett og sosiale medier","To runder med rettelser"],"2 400","Bestill logo-animasjon"],["Animert innlegg","Et kort, levende innlegg eller story som stopper scrollingen.",["Opptil 15 sekunder","Tilpasset format (kvadrat eller stående)","Én runde med rettelser"],"2 900","Bestill animert innlegg"]]];
- var E=[[["Logo","Your logo is the face of your business – a simple mark customers recognise you by.",["2–3 proposals to choose from","Revisions until you are happy (up to 3 rounds)","Finished files for web and print, in colour and black/white"],"2 900","Order logo"],["Logo and style","Logo plus the colours, fonts and image style you will use everywhere – so everything looks like it comes from the same business.",["Logo in several versions","Colour palette and two fonts","Simple examples of use (e.g. business cards and social media)","All files ready to use"],"5 900","Order logo and style"],["Complete identity","The whole package: logo, style and ready-made templates, gathered in a simple design manual.",["Everything in “Logo and style”","Templates for business cards, letterhead and social media","Design manual with simple rules","Examples of how everything looks in use"],"9 900","Order complete identity"],["Design manual","A short guide showing how the logo, colours and fonts should be used – so it is right every time, whoever makes something for you.",["How the logo should (and should not) be used","Colour codes for screen and print","Fonts and simple rules","A PDF you can send to printers and partners"],"1 900","Order design manual"]],[["Logo upgrade","You keep what customers recognise, but make the logo sharper and more modern.",["Review of your current logo","1–2 proposals for an updated logo","New files for web and print"],"2 400","Order logo upgrade"],["New identity","Renews the whole expression: logo, colours and fonts, so everything feels fresh and cohesive.",["Review of everything you use today","New logo, colours and fonts","Updated templates and design manual"],"7 900","Order new identity"]],[["Business cards","A finished layout of your business card, ready for print.",["Front and back design","Files ready for the printer","One round of revisions"],"590","Order business cards"],["Flyer and poster","A design that makes people stop and read – for handing out or putting up.",["Finished design in your chosen size (A6–A3)","Files ready for the printer","Two rounds of revisions"],"1 200","Order flyer or poster"],["Menu","A tidy, easy-to-read menu that suits the style of your venue.",["Menu design in your chosen format","Ready for print and web","Two rounds of revisions","Price is per page"],"590","Order menu","per page"],["Brochure","A clear layout that tells the story of your business in a few pages.",["Layout for 4 pages (folded A4 or A5)","Text and images set up neatly","Files ready for print"],"1 900","Order brochure"],["Catalogue and magazine","Layout of multiple pages with text and images – from a members’ magazine to a product catalogue.",["Page layout and shared template","Images and text set up","Files ready for print","Price is per page"],"490","Order catalogue or magazine","per page"],["Signs and stands","Design for roll-ups, beach flags, banners and façade signs.",["Design adapted to format and material","Measurements and files ready for the manufacturer","Suggestions for placement"],"1 200","Order sign or stand"],["Vehicle branding","Your car as advertising: logo and contact info designed to be read from a distance.",["Design made for your exact car","Visualisation on the car before you order","Files ready for vinyl and print"],"2 400","Order vehicle branding"],["Advert","Design of an advert for a newspaper, magazine or the web.",["Design in the right format","Files for print or web","Two rounds of revisions"],"1 200","Order advert"],["Social media","Templates you can use again and again – so your posts always look like you.",["Five templates for posts and stories","Profile picture and cover image","Simple guidance (e.g. in Canva)"],"2 400","Order social media"],["Website (design)","Design of a simple, clear website that works on mobile and PC.",["Design of front page and subpages","Adapted to mobile and PC","Matched to your logo and colours"],"5 500","Order website"],["Sharp files and print preparation","Have a logo or graphic that gets blurry when enlarged? I redraw it so it stays sharp at every size.",["The logo is redrawn","Files for web and print (AI, EPS, PDF, SVG, PNG)","Colour and black/white versions","Files ready for print"],"490","Order sharp files"]],[["Logo animation","Your logo in motion – a short animation for your website and social media.",["5–10 second animation","Versions for web and social media","Two rounds of revisions"],"2 400","Order logo animation"],["Animated post","A short, lively post or story that stops the scroll.",["Up to 15 seconds","Adapted format (square or vertical)","One round of revisions"],"2 900","Order animated post"]]];
- var CN=[["Logo og profil","Oppdater det du har","Trykk og reklame","Animasjon"],["Logo & profile","Update what you have","Print & advertising","Animation"]];
- var P=document.getElementById('panel'),cur=null,pin=null,cards=[].slice.call(document.querySelectorAll('.card')),nb=function(s){return s.replace(/ /g,' ')};
+ var D=[[["Logo", "For deg som trenger en logo – et tydelig merke som kundene kjenner deg igjen på.", ["2–3 forslag å velge mellom", "Inntil 3 runder med endringer", "Logoen i alle varianter: i farger, i svart, i hvitt og en liten versjon (til profilbilde og nettside)", "Ferdige filer til nett, trykk, skilt og bil", "Logoen er din – du får alle rettigheter"], "2 900", "Bestill logo", null, null, "Første forslag innen 1–2 virkedager"], ["Logo og visittkort", "For deg som starter og vil se profesjonell ut fra første dag. Har du logo fra før? Da kan vi bygge videre på den.", ["Logo i alle varianter (som i «Logo»)", "Farger og skrifter som passer bedriften din – så alt du lager ser ut som det kommer fra samme sted", "Ferdig design av visittkort, klart til trykk", "Visualisering av hvordan profilen din ser ut på sosiale medier", "2–3 forslag og inntil 3 runder med endringer", "Logoen er din – du får alle rettigheter"], "4 600", "Bestill minipakke", null, "Minipakke", "Første forslag innen 1–2 virkedager"], ["Alt du trenger for å starte", "Hele uttrykket på plass – fra logo til ferdige maler du kan bruke selv. Har du logo fra før? Da kan vi bygge videre på den.", ["Alt i minipakken", "Brevark og konvolutt", "Maler til innlegg og stories, som du enkelt kan bruke selv", "Profilhåndbok: en enkel guide til logo, farger og skrifter – og hvordan profilen ser ut på ting som passer akkurat din bedrift (f.eks. skilt, bil, arbeidsklær, kopper eller emballasje)", "2–3 forslag og inntil 3 runder med endringer", "Logoen er din – du får alle rettigheter"], "9 900", "Bestill maksipakke", null, "Maksipakke", "Første forslag innen 2–3 virkedager"], ["Oppfrisk logoen", "Har du en logo som kundene kjenner, men som ser gammeldags ut? Jeg beholder det som gjør den gjenkjennelig, og gjør resten enklere og mer moderne.", ["2–3 forslag å velge mellom", "Inntil 3 runder med endringer", "Logoen i alle varianter: i farger, i svart, i hvitt og en liten versjon", "Ferdige filer til nett, trykk, skilt og bil"], "2 400", "Bestill oppfrisking", null, null, "Første forslag innen 1–2 virkedager"], ["Skarp logo", "Har du en logo eller grafikk som blir uskarp når den forstørres? Jeg tegner den opp på nytt, så den blir skarp i alle størrelser.", ["Logoen tegnes opp på nytt", "Filer til nett og trykk (AI, EPS, PDF, SVG, PNG)", "Farger og svart-hvitt-versjoner", "Filer klare for trykk"], "490", "Bestill skarp logo", null, null, null]], [["Visittkort", "Et ferdig oppsett av visittkortet ditt, klart til trykk.", ["Design foran og bak", "Filer klare for trykkeri", "Én runde med rettelser"], "590", "Bestill visittkort", null, null, null], ["Flyer og plakat", "Et design som får folk til å stoppe opp og lese – til utdeling eller oppslag.", ["Ferdig design i ønsket størrelse (A6–A3)", "Filer klare for trykkeri", "To runder med rettelser"], "1 200", "Bestill flyer eller plakat", null, null, null], ["Meny", "En ryddig og lettlest meny som passer stilen til stedet ditt.", ["Design av menyen i ønsket format", "Klar for trykk og for nett", "To runder med rettelser", "Prisen regnes per side"], "590", "Bestill meny", "per side", null, null], ["Brosjyre", "Tydelig oppsett som forteller om bedriften din på noen få sider.", ["Layout for 4 sider (brettet A4 eller A5)", "Tekst og bilder satt opp ryddig", "Filer klare for trykk"], "1 900", "Bestill brosjyre", null, null, null], ["Katalog og magasin", "Layout av flere sider med tekst og bilder – fra medlemsblad til produktkatalog.", ["Oppsett av sider og felles mal", "Bilder og tekster satt opp", "Filer klare for trykk", "Prisen regnes per side"], "490", "Bestill katalog eller magasin", "per side", null, null], ["Annonse i avis og magasin", "Design av en annonse til avis eller magasin.", ["Design i riktig format og størrelse", "Filer klare for trykk", "To runder med rettelser"], "1 200", "Bestill annonse", null, null, null]], [["Skilt og stands", "Design til rollup, beachflagg, banner og skilt på fasaden.", ["Design tilpasset format og materiale", "Mål og filer klare for produsent", "Forslag til plassering"], "1 200", "Bestill skilt eller stand", null, null, null], ["Bilprofilering", "Bilen din som reklame: logo og kontaktinfo designet slik at det leses på avstand.", ["Design tilpasset akkurat din bil", "Visualisering på bilen før du bestiller", "Filer klare for folie og trykk"], "2 400", "Bestill bilprofilering", null, null, null]], [["Sosiale medier", "Maler du kan bruke om og om igjen – så innleggene dine alltid ser ut som deg.", ["Fem maler til innlegg og stories", "Profilbilde og forsidebilde", "Enkel veiledning (f.eks. i Canva)"], "2 400", "Bestill sosiale medier", null, null, null], ["Nettside (design)", "Design av en enkel, tydelig nettside som fungerer på mobil og PC.", ["Design av forside og undersider", "Tilpasset mobil og PC", "Tilpasset din logo og dine farger"], "5 500", "Bestill nettside", null, null, null], ["Annonse på nett og sosiale medier", "Design av en annonse til Facebook, Instagram eller nettsider.", ["Design i riktige formater for nett og sosiale medier", "Ferdige filer, klare til å legge ut", "To runder med rettelser"], "1 200", "Bestill annonse", null, null, null], ["Logo-animasjon", "Logoen din i bevegelse – en kort animasjon til nettside og sosiale medier.", ["5–10 sekunders animasjon", "Versjoner til nett og sosiale medier", "To runder med rettelser"], "2 400", "Bestill logo-animasjon", null, null, null], ["Animert innlegg", "Et kort, levende innlegg eller story som stopper scrollingen.", ["Opptil 15 sekunder", "Tilpasset format (kvadrat eller stående)", "Én runde med rettelser"], "2 900", "Bestill animert innlegg", null, null, null]]];
+ var E=[[["Logo", "For you who need a logo – a clear mark your customers recognise you by.", ["2–3 proposals to choose from", "Up to 3 rounds of revisions", "Your logo in every version: in colour, in black, in white and a small version (for profile pictures and websites)", "Finished files for web, print, signs and vehicles", "The logo is yours – you get all the rights"], "2 900", "Order logo", null, null, "First proposal within 1–2 working days"], ["Logo and business card", "For you who are starting out and want to look professional from day one. Already have a logo? We can build on it.", ["Logo in every version (as in “Logo”)", "Colours and fonts that suit your business – so everything you make looks like it comes from the same place", "Finished business card design, ready for print", "A visualisation of how your profile looks on social media", "2–3 proposals and up to 3 rounds of revisions", "The logo is yours – you get all the rights"], "4 600", "Order mini package", null, "Mini package", "First proposal within 1–2 working days"], ["Everything you need to start", "Your whole identity in place – from logo to ready-made templates you can use yourself. Already have a logo? We can build on it.", ["Everything in the mini package", "Letterhead and envelope", "Templates for posts and stories that you can easily use yourself", "Brand guidelines: a simple guide to your logo, colours and fonts – and how your profile looks on things that suit your business (e.g. signs, vehicles, workwear, cups or packaging)", "2–3 proposals and up to 3 rounds of revisions", "The logo is yours – you get all the rights"], "9 900", "Order maxi package", null, "Maxi package", "First proposal within 2–3 working days"], ["Refresh your logo", "Do you have a logo your customers know, but that looks dated? I keep what makes it recognisable and make the rest simpler and more modern.", ["2–3 proposals to choose from", "Up to 3 rounds of revisions", "Your logo in every version: in colour, in black, in white and a small version", "Finished files for web, print, signs and vehicles"], "2 400", "Order logo refresh", null, null, "First proposal within 1–2 working days"], ["Sharp logo", "Have a logo or graphic that gets blurry when enlarged? I redraw it so it stays sharp at every size.", ["The logo is redrawn", "Files for web and print (AI, EPS, PDF, SVG, PNG)", "Colour and black/white versions", "Files ready for print"], "490", "Order sharp logo", null, null, null]], [["Business cards", "A finished layout of your business card, ready for print.", ["Front and back design", "Files ready for the printer", "One round of revisions"], "590", "Order business cards", null, null, null], ["Flyer and poster", "A design that makes people stop and read – for handing out or putting up.", ["Finished design in your chosen size (A6–A3)", "Files ready for the printer", "Two rounds of revisions"], "1 200", "Order flyer or poster", null, null, null], ["Menu", "A tidy, easy-to-read menu that suits the style of your venue.", ["Menu design in your chosen format", "Ready for print and web", "Two rounds of revisions", "Price is per page"], "590", "Order menu", "per page", null, null], ["Brochure", "A clear layout that tells the story of your business in a few pages.", ["Layout for 4 pages (folded A4 or A5)", "Text and images set up neatly", "Files ready for print"], "1 900", "Order brochure", null, null, null], ["Catalogue and magazine", "Layout of multiple pages with text and images – from a members’ magazine to a product catalogue.", ["Page layout and shared template", "Images and text set up", "Files ready for print", "Price is per page"], "490", "Order catalogue or magazine", "per page", null, null], ["Newspaper and magazine ad", "Design of an advert for a newspaper or magazine.", ["Design in the right format and size", "Files ready for print", "Two rounds of revisions"], "1 200", "Order advert", null, null, null]], [["Signs and stands", "Design for roll-ups, beach flags, banners and façade signs.", ["Design adapted to format and material", "Measurements and files ready for the manufacturer", "Suggestions for placement"], "1 200", "Order sign or stand", null, null, null], ["Vehicle branding", "Your car as advertising: logo and contact info designed to be read from a distance.", ["Design made for your exact car", "Visualisation on the car before you order", "Files ready for vinyl and print"], "2 400", "Order vehicle branding", null, null, null]], [["Social media", "Templates you can use again and again – so your posts always look like you.", ["Five templates for posts and stories", "Profile picture and cover image", "Simple guidance (e.g. in Canva)"], "2 400", "Order social media", null, null, null], ["Website (design)", "Design of a simple, clear website that works on mobile and PC.", ["Design of front page and subpages", "Adapted to mobile and PC", "Matched to your logo and colours"], "5 500", "Order website", null, null, null], ["Online and social media ad", "Design of an advert for Facebook, Instagram or websites.", ["Design in the right formats for web and social media", "Finished files, ready to post", "Two rounds of revisions"], "1 200", "Order advert", null, null, null], ["Logo animation", "Your logo in motion – a short animation for your website and social media.", ["5–10 second animation", "Versions for web and social media", "Two rounds of revisions"], "2 400", "Order logo animation", null, null, null], ["Animated post", "A short, lively post or story that stops the scroll.", ["Up to 15 seconds", "Adapted format (square or vertical)", "One round of revisions"], "2 900", "Order animated post", null, null, null]]];
+ var CN=[["Logo","Trykksaker","Skilt og bil","Nett og sosiale medier"],["Logo","Print","Signs and vehicles","Web and social media"]];
+ var P=document.getElementById('panel'),O=document.getElementById('ov'),X=O.querySelector('.x'),cur=null,pin=null,cards=[].slice.call(document.querySelectorAll('.card')),nb=function(s){return s.replace(/ /g,' ')};
  function collapse(c){if(c===pin)return;c.classList.remove('open');c.querySelector('.head').setAttribute('aria-expanded','false')}
+ /* ruller slik at hele kategorien synes: tittelen rett under menyen */
+ function reveal(c){
+  var hh=document.querySelector('header').offsetHeight,r=c.getBoundingClientRect(),
+      full=c.querySelector('.head').offsetHeight+c.querySelector('.body>div').scrollHeight+18;
+  if(r.top<hh+8||r.top+full>innerHeight-8){
+   scrollTo({top:scrollY+r.top-hh-12,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}
+ }
  function expand(c){cards.forEach(function(o){if(o!==c)collapse(o)});c.classList.add('open');c.querySelector('.head').setAttribute('aria-expanded','true')}
- function close(){P.hidden=true;if(cur){cur.setAttribute('aria-expanded','false');cur=null}var p=pin;pin=null;if(p)collapse(p)}
+ function close(go){if(O.hidden)return;O.hidden=true;document.body.classList.remove('lock');var b=cur;if(cur){cur.setAttribute('aria-expanded','false');cur=null}var p=pin;pin=null;
+  /* kategorien forblir åpen etter at vinduet lukkes */
+  if(b&&!go)b.focus({preventScroll:true})}
  cards.forEach(function(c,ci){
   var ul=c.querySelector('.s');
-  c.querySelector('.head').addEventListener('click',function(){c.classList.contains('open')&&c!==pin?collapse(c):expand(c)});
-  c.addEventListener('mouseleave',function(){collapse(c)});
-  c.addEventListener('focusout',function(e){if(!e.relatedTarget||!c.contains(e.relatedTarget))collapse(c)});
+  c.querySelector('.head').addEventListener('click',function(){
+   if(c.classList.contains('open')&&c!==pin){collapse(c);return}
+   /* andre åpne kort lukkes uten animasjon, så siden ikke hopper mens vi ruller */
+   cards.forEach(function(o){if(o!==c&&o!==pin){var bd=o.querySelector('.body');bd.style.transition='none';collapse(o);bd.offsetHeight;bd.style.transition=''}});
+   expand(c);reveal(c);
+  });
+  c.addEventListener('focusout',function(e){if(e.relatedTarget&&!c.contains(e.relatedTarget)&&!e.relatedTarget.closest('.ov'))collapse(c)});
   D[ci].forEach(function(s0,ix){
    var li=document.createElement('li'),b=document.createElement('button'),sp=document.createElement('span');
-   b.type='button';b.setAttribute('aria-expanded','false');sp.textContent=s0[0];b.appendChild(sp);
+   b.type='button';b.setAttribute('aria-expanded','false');sp.textContent=s0[0];b.appendChild(sp);if(s0[6]){var tg=document.createElement('small');tg.textContent=s0[6];b.appendChild(tg)}
    b.addEventListener('click',function(){
     if(cur===b){close();return}
     var s=(window.EN?E:D)[ci][ix];
     if(cur)cur.setAttribute('aria-expanded','false');
     cur=b;b.setAttribute('aria-expanded','true');
     var old=pin;pin=c;if(old&&old!==c)collapse(old);
-    var d=P.children;
-    d[1].children[0].textContent=CN[window.EN?1:0][ci];d[1].children[1].textContent=s[0];d[1].children[2].textContent=s[1];
-    var l=d[2].children[1];l.textContent='';
+    var q=function(x){return P.querySelector(x)},d=[P];
+    q('.cat').textContent=CN[window.EN?1:0][ci];q('#ptitle').textContent=s[0];q('.pd').textContent=s[1];
+    var pk=q('.pk');pk.hidden=!s[6];pk.textContent=s[6]||'';
+    var et=q('.eta');et.hidden=!s[7];et.textContent=s[7]||'';
+    var no=q('.note');no.hidden=ci>2;no.textContent=window.EN?'Printing and production: I can arrange printing or production for you. This is invoiced separately.':'Trykk og produksjon: Jeg kan organisere trykk eller produksjon for deg. Det faktureres separat.';
+    var l=q('ul');l.textContent='';
     s[2].forEach(function(x){var i=document.createElement('li');i.textContent=x;l.appendChild(i)});
-    d[2].querySelector('.price span').textContent=nb(s[3]+(window.EN?' NOK':' kr')+(s[5]?' '+s[5]:''));
-    var a=d[2].querySelector('.btn');a.textContent=s[4]+' →';
+    q('.price span').textContent=nb(s[3]+(window.EN?' NOK':' kr')+(s[5]?' '+s[5]:''));
+    var a=q('.btn');a.textContent=s[4]+' →';
     a.dataset.v=s[0];
-    P.hidden=false;P.style.animation='none';P.offsetWidth;P.style.animation='';
-    P.scrollIntoView({behavior:'smooth',block:'nearest'});
+    X.setAttribute('aria-label',L('Lukk'));
+    O.hidden=false;document.body.classList.add('lock');P.scrollTop=0;
+    X.focus({preventScroll:true});
    });
    li.appendChild(b);ul.appendChild(li);
   });
  });
- [].forEach.call(document.querySelectorAll('.quick button'),function(q){q.addEventListener('click',function(){
+ [].forEach.call(document.querySelectorAll('.quick>button'),function(q){q.addEventListener('click',function(){
   var c=cards[+q.dataset.c],b=c.querySelectorAll('.s button')[+q.dataset.i];
   expand(c);
-  if(cur!==b)b.click();else P.scrollIntoView({behavior:'smooth',block:'nearest'});
+  b.click();
  })});
- document.addEventListener('click',function(e){if(!e.target.closest('.card,.panel'))cards.forEach(collapse)});
- P.querySelector('.x').addEventListener('click',close);
- window.svcLang=function(){close();cards.forEach(function(c,ci){[].forEach.call(c.querySelectorAll('.s span'),function(sp,i){sp.textContent=(window.EN?E:D)[ci][i][0]})})};
- P.querySelector('.btn').addEventListener('click',function(){
-  document.getElementById('s').value=(window.EN?'I would like: ':'Jeg ønsker: ')+this.dataset.v;
-  setTimeout(function(){document.getElementById('m').focus({preventScroll:true})},700);
+ document.addEventListener('click',function(e){if(!e.target.closest('.card,.ov'))cards.forEach(collapse)});
+ X.addEventListener('click',function(){close()});
+ /* klikk/trykk utenfor vinduet lukker det */
+ O.addEventListener('click',function(e){if(e.target===O)close()});
+ /* Esc lukker, Tab blir i vinduet */
+ document.addEventListener('keydown',function(e){if(O.hidden)return;
+  if(e.key==='Escape'){close();return}
+  if(e.key==='Tab'){var f=[].slice.call(O.querySelectorAll('button,a[href]')),i=f.indexOf(document.activeElement);
+   if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}}});
+ /* søk: stikkord folk faktisk bruker */
+ var SY=[["logo merke symbol emblem","logo visittkort minipakke pakke start","maksipakke pakke profil grafisk identitet branding brevark konvolutt maler profilhandbok designmanual komplett","oppdatere fornye redesign gammel modernisere oppgradering refresh","vektor uskarp piksel pixel svg eps ai trykkeklar filer"],
+  ["kort business card","flyer flygeblad lopeseddel plakat poster","meny menu restaurant kafe spisekart","brosjyre folder brochure","katalog magasin blad tidsskrift bok medlemsblad produktkatalog","annonse reklame avis magasin trykk ad"],
+  ["skilt rollup roll-up beachflagg banner fasade stand messe sign","bil folie bilreklame varebil bildekor car vehicle"],
+  ["instagram facebook some sosiale medier maler canva innlegg stories","nettside hjemmeside webside nettsted website web nett","annonse reklame facebook instagram banner nett digital ad","animasjon video bevegelse logo motion","animasjon video reels story bevegelse motion"]];
+ function norm(t){return (t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/æ/g,'ae').replace(/ø/g,'o')}
+ var IX=[];D.forEach(function(c,ci){c.forEach(function(r,ix){var e=E[ci][ix];
+  IX.push({ci:ci,ix:ix,n:norm(r[0]+' '+e[0]),k:norm([r[0],CN[0][ci],e[0],CN[1][ci],SY[ci]&&SY[ci][ix]].join(' ')),h:norm([r[1],r[2].join(' '),e[1],e[2].join(' ')].join(' '))})})});
+ window.SVC={
+  find:function(q){var w=norm(q).split(/[^a-z0-9]+/).filter(Boolean);if(!w.length)return[];
+   /* først navn og stikkord; beskrivelser bare hvis ingenting ble funnet */
+   function hit(f){return IX.filter(function(x){return w.every(function(t){return f(x).indexOf(t)>-1})})}
+   var m=hit(function(x){return x.k});if(!m.length)m=hit(function(x){return x.k+' '+x.h});
+   return m.map(function(x){
+     var sc=w.reduce(function(a,t){return a+(x.n.indexOf(t)>-1?3:0)+((' '+x.n).indexOf(' '+t)>-1?2:0)},0);return {x:x,s:sc}})
+    .filter(Boolean).sort(function(a,b){return b.s-a.s}).slice(0,7).map(function(o){var r=(window.EN?E:D)[o.x.ci][o.x.ix];
+     return {ci:o.x.ci,ix:o.x.ix,name:r[0],cat:CN[window.EN?1:0][o.x.ci],price:nb((window.EN?'from ':'fra ')+r[3]+(window.EN?' NOK':' kr')+(r[5]?' '+r[5]:''))}})},
+  open:function(ci,ix){var c=cards[ci];expand(c);c.querySelectorAll('.s button')[ix].click()}
+ };
+ window.svcLang=function(){close(true);cards.forEach(function(c,ci){[].forEach.call(c.querySelectorAll('.s button'),function(bt,i){var r=(window.EN?E:D)[ci][i];bt.querySelector('span').textContent=r[0];var tg=bt.querySelector('small');if(tg)tg.textContent=r[6]})})};
+ /* «Bestill …» → rett til skjemaet (ikke til bildet) */
+ P.querySelector('.btn').addEventListener('click',function(e){
+  e.preventDefault();
+  var F=document.getElementById('skjema'),sv=document.getElementById('s');
+  sv.value=(window.EN?'I would like: ':'Jeg ønsker: ')+this.dataset.v;
+  close(true);
+  F.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});
+  var fl=sv.closest('.fld');fl.classList.add('hit');setTimeout(function(){fl.classList.remove('hit')},1800);
+  setTimeout(function(){var q=[].filter.call(F.querySelectorAll('[required]'),function(i){return !i.value})[0]||document.getElementById('m');q.focus({preventScroll:true})},750);
  });
 })();
 
-(function(){var w=document.querySelector('.work'),t=[].slice.call(w.querySelectorAll('.tile'));
- function set(o){t.forEach(function(x){var on=x===o;x.classList.toggle('open',on);x.setAttribute('aria-expanded',on);});[].forEach.call(w.querySelectorAll('.col'),function(c){c.classList.toggle('open',!!(o&&c===o.parentNode))});w.classList.toggle('has-open',!!o)}
- t.forEach(function(x){x.addEventListener('click',function(){var was=x.classList.contains('open');set(was?null:x);if(!was&&innerWidth<=900)setTimeout(function(){x.scrollIntoView({behavior:'smooth',block:'nearest'})},350)});
-  x.parentNode.addEventListener('mouseleave',function(){if(x.classList.contains('open')&&matchMedia('(hover:hover)').matches)set(null)});
-  x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();x.click()}})});
- document.addEventListener('keydown',function(e){if(e.key==='Escape')set(null)});
- document.addEventListener('click',function(e){if(!e.target.closest('.work'))set(null)});
+(function(){
+ var H=document.querySelector('header'),SB=H.querySelector('.sbtn'),HS=document.getElementById('hs');
+ function T(no,en){return window.EN?en:no}
+ function wire(inp,list,after){var act=-1,res=[];
+  function hide(){list.hidden=true;act=-1;inp.setAttribute('aria-expanded','false')}
+  function draw(){var q=inp.value.trim();list.textContent='';act=-1;if(!q){hide();return}
+   res=window.SVC.find(q);
+   if(!res.length){var li=document.createElement('li');li.className='none';
+     li.innerHTML=T('Ingen treff. <a href="#skjema">Skriv til meg</a>, så finner vi en løsning.','No results. <a href="#skjema">Write to me</a> and we will find a solution.');
+     li.querySelector('a').addEventListener('click',function(){hide();after&&after()});list.appendChild(li)}
+   res.forEach(function(r,i){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.setAttribute('role','option');b.id=list.id+'-'+i;
+    b.innerHTML='<b></b><small></small>';b.children[0].textContent=r.name;b.children[1].textContent=r.cat+' · '+r.price;
+    b.addEventListener('click',function(){pick(i)});li.appendChild(b);list.appendChild(li)});
+   list.hidden=false;inp.setAttribute('aria-expanded','true')}
+  function pick(i){var r=res[i];if(!r)return;hide();after&&after();window.SVC.open(r.ci,r.ix)}
+  function mark(i){var bs=list.querySelectorAll('button');if(!bs.length)return;act=(i+bs.length)%bs.length;
+   [].forEach.call(bs,function(b,k){b.classList.toggle('act',k===act)});bs[act].scrollIntoView({block:'nearest'});inp.setAttribute('aria-activedescendant',bs[act].id)}
+  inp.addEventListener('input',draw);
+  inp.addEventListener('focus',function(){if(inp.value.trim())draw()});
+  inp.addEventListener('keydown',function(e){
+   if(e.key==='ArrowDown'){e.preventDefault();if(list.hidden)draw();mark(act+1)}
+   else if(e.key==='ArrowUp'){e.preventDefault();mark(act-1)}
+   else if(e.key==='Enter'){e.preventDefault();pick(act<0?0:act)}
+   else if(e.key==='Escape'){if(!list.hidden){e.stopPropagation();hide()}}});
+  document.addEventListener('click',function(e){if(!e.target.closest('.sf,.sres'))hide()});
+  return {hide:hide,draw:draw};
+ }
+ var qs=wire(document.getElementById('qsq'),document.getElementById('qsr'));
+ var hsI=document.getElementById('hsq'),hs=wire(hsI,document.getElementById('hsr'),function(){hsI.value='';toggle(false)});
+ function toggle(o){HS.hidden=!o;SB.setAttribute('aria-expanded',o);
+  if(o){H.classList.remove('mo');var bg=H.querySelector('.bgr');bg&&bg.setAttribute('aria-expanded','false');setTimeout(function(){hsI.focus()},30)}else hs.hide()}
+ SB.addEventListener('click',function(){toggle(HS.hidden)});
+ H.querySelector('.bgr').addEventListener('click',function(){if(!HS.hidden)toggle(false)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!HS.hidden){toggle(false);SB.focus()}});
+ document.addEventListener('click',function(e){if(!HS.hidden&&!e.target.closest('.hs,.sbtn'))toggle(false)});
+ window.searchLang=function(){var ph=T('Søk etter tjeneste … f.eks. meny, skilt, nettside','Search services … e.g. menu, sign, website');
+  [hsI,document.getElementById('qsq')].forEach(function(i){i.placeholder=ph;i.setAttribute('aria-label',T('Søk etter tjeneste','Search services'))});
+  document.getElementById('qsq').placeholder=T('Søk … f.eks. meny, skilt','Search … e.g. menu, sign');
+  SB.setAttribute('aria-label',T('Søk','Search'));qs.hide();hs.hide()};
+ searchLang();
+})();
+
+(function(){
+ var R=document.querySelector('.cf'),S=R.querySelector('.cf-stage'),C=[].slice.call(R.querySelectorAll('.cf-card')),n=C.length,cur=0,
+     info=R.querySelector('.cf-info'),D=R.querySelector('.cf-dots'),LB=document.getElementById('lb'),drag=null,moved=false;
+ C.forEach(function(c,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',(i+1)+' / '+n);b.addEventListener('click',function(){go(i)});D.appendChild(b)});
+ var dots=[].slice.call(D.children);
+ function step(){return C[0].offsetWidth*(innerWidth<=640?.56:.64)}
+ function lay(f){/* f = posisjon (kan være brøk under sveip) */
+  var st=step();
+  C.forEach(function(c,i){
+   var d=i-f;d=((d%n)+n)%n;if(d>n/2)d-=n;
+   var a=Math.abs(d),sg=d<0?-1:1,
+       tx=sg*(Math.min(a,1)*st+Math.max(a-1,0)*st*.6),
+       tz=-a*160,ry=-sg*Math.min(a,1.6)*16,sc=1-Math.min(a,2)*.07;
+   c.style.transform='translateX(-50%) translateX('+tx+'px) translateZ('+tz+'px) rotateY('+ry+'deg) scale('+sc+')';
+   c.style.opacity=a>2.2?0:a>1?1-(a-1)*.35:1;
+   c.style.filter='brightness('+(1-Math.min(a,2)*.12)+')';
+   c.style.zIndex=100-Math.round(a*10);
+   c.style.pointerEvents=a>2.2?'none':'';
+  });
+ }
+ function text(){var c=C[cur];
+  info.children[0].textContent=c.querySelector('.cf-name').textContent;
+  info.children[1].textContent=c.querySelector('.cf-type').textContent;
+  C.forEach(function(x,i){var on=i===cur;x.classList.toggle('on',on);x.tabIndex=on?0:-1;x.setAttribute('aria-hidden',on?'false':'true');
+   x.setAttribute('aria-label',on?L('Se større')+': '+x.querySelector('img').alt:x.querySelector('img').alt)});
+  dots.forEach(function(b,i){b.classList.toggle('on',i===cur);b.setAttribute('aria-current',i===cur)});
+ }
+ function go(i){cur=((i%n)+n)%n;lay(cur);text();if(!LB.hidden)lbShow()}
+ R.querySelector('.cf-prev').addEventListener('click',function(){go(cur-1)});
+ R.querySelector('.cf-next').addEventListener('click',function(){go(cur+1)});
+ S.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1);C[cur].focus({preventScroll:true})}if(e.key==='ArrowRight'){e.preventDefault();go(cur+1);C[cur].focus({preventScroll:true})}});
+ C.forEach(function(c,i){c.addEventListener('click',function(){if(moved)return;if(i===cur)lbOpen();else go(i)})});
+ /* sveip / dra */
+ S.addEventListener('pointerdown',function(e){if(e.button)return;drag={x:e.clientX,y:e.clientY,id:e.pointerId,on:false};moved=false});
+ S.addEventListener('pointermove',function(e){if(!drag||e.pointerId!==drag.id)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+  if(!drag.on){if(Math.abs(dx)<8||Math.abs(dx)<Math.abs(dy))return;drag.on=true;moved=true;R.classList.add('drag');try{S.setPointerCapture(e.pointerId)}catch(_){}}
+  lay(cur-dx/step())});
+ function end(e){if(!drag)return;var on=drag.on,dx=e.clientX-drag.x;drag=null;R.classList.remove('drag');
+  if(on){var k=Math.round(dx/step());if(!k&&Math.abs(dx)>step()*.18)k=dx<0?-1:1;go(cur-k);setTimeout(function(){moved=false},0)}}
+ S.addEventListener('pointerup',end);S.addEventListener('pointercancel',function(e){if(drag){drag.on&&go(cur);drag=null;R.classList.remove('drag')}});
+ addEventListener('resize',function(){lay(cur)});
+ /* fullskjerm */
+ var li=LB.querySelector('img'),lc=LB.querySelector('figcaption'),last=null;
+ function lbShow(){var c=C[cur],im=c.querySelector('img');li.src=im.currentSrc||im.src;li.alt=im.alt;
+  lc.textContent=c.querySelector('.cf-type').textContent+' – '+c.querySelector('.cf-name').textContent+' · '+(cur+1)+' / '+n}
+ function lbOpen(){last=document.activeElement;lbShow();LB.hidden=false;document.body.classList.add('lock');
+  LB.querySelector('.lb-x').setAttribute('aria-label',L('Lukk'));LB.querySelector('.lb-x').focus({preventScroll:true})}
+ function lbClose(){if(LB.hidden)return;LB.hidden=true;document.body.classList.remove('lock');(last&&last.closest('.cf')?C[cur]:last||C[cur]).focus({preventScroll:true})}
+ LB.querySelector('.lb-x').addEventListener('click',lbClose);
+ LB.querySelector('.lb-p').addEventListener('click',function(){go(cur-1)});
+ LB.querySelector('.lb-n').addEventListener('click',function(){go(cur+1)});
+ LB.addEventListener('click',function(e){if(e.target===LB||e.target.tagName==='FIGURE')lbClose()});
+ document.addEventListener('keydown',function(e){if(LB.hidden)return;if(e.key==='Escape')lbClose();if(e.key==='ArrowLeft')go(cur-1);if(e.key==='ArrowRight')go(cur+1)});
+ window.workLang=function(){text();if(!LB.hidden)lbShow()};
+ go(0);
 })();
 
 (function(){var f=document.querySelector('form'),fi=f.querySelector('#f'),fn=f.querySelector('#fn'),b=f.querySelector('button[type=submit]'),m=document.createElement('p');
@@ -408,7 +626,7 @@ addEventListener('DOMContentLoaded',function(){try{if(localStorage.getItem('om-l
 })();
 
 (function(){var h=document.querySelector('header');function f(){h.classList.toggle('sc',scrollY>8)}addEventListener('scroll',f,{passive:true});f();
- var el=document.querySelectorAll('.title,.lead,.work,.svc,.about>*,form>*');
+ var el=document.querySelectorAll('.title,.lead,.cf,.svc,.about>*,form>*');
  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
  el.forEach(function(e){e.classList.add('rv')});
  var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var t=x.target;t.classList.add('in');o.unobserve(t);setTimeout(function(){t.classList.remove('rv','in');t.style.transitionDelay=''},1500)}})},{rootMargin:'0px 0px -8% 0px'});
